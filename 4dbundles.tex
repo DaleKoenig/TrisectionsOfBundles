@@ -505,9 +505,14 @@ We construct the diagram keeping this in mind, drawing three copies of $\Sigma$ 
 
 Let $\Sigma_1$, $\Sigma_2$, and $\Sigma_3$ be the (twice punctured) copies of $\Sigma$ lying at the three triple intersection corners from left to right.
 So $\Sigma_1$ is a twice punctured Heegaard surface of $M_{1/4}$, $\Sigma_2$ of $M_{1/2}$, and $\Sigma_3$ of $M_{3/4}$.
- There is a natural identification between these three copies of $M$, and this induces a natural identification between the three $\Sigma_i$.
+The product $[1/4, 3/4] \times M$ induces a natural identification between $M_{1/4}$, $M_{1/2}$, and $M_{3/4}$, and this induces a natural identification between the three $\Sigma_i$.
+$I_{23} \times M$ induces a different identification between $M_{3/4}$ and $M_{1/4}$ by the automorphism $\varphi$, and this identification restricts to give an identification of $\Sigma_3$ and $\Sigma_1$ by $\varphi$.
+
+
 Embed $\Sigma_1$, $\Sigma_2$ and $\Sigma_3$ into $\R^3$ along three axes $\theta_1,\theta_2$, $\theta_3$ evenly distributed in $\theta$ as in Figure \ref{embeddingsigmas}.
-We embed such that that rotating $\Sigma_1$ by $2\pi/3$ and then reflecting induces the natural identification between $\Sigma_1$ and $\Sigma_2$, while rotating $\Sigma_1$ by $4\pi/3$ (no reflection) induces the natural identification between $\Sigma_1$ and $\Sigma_3$.
+We embed such that that rotating $\Sigma_1$ by $2\pi/3$ and then reflecting induces the natural identification (induced by induced by $[1/4,3/4] \times M$) between $\Sigma_1$ and $\Sigma_2$.
+Similarly rotating $\Sigma_1$ by $4\pi/3$ (no reflection) gives the same identification between $\Sigma_1$ and $\Sigma_3$ as the natural identification induced by $[1/4,3/4] \times M$.
+The identification between $\Sigma_1$ and $\Sigma_3$ induced by $I_{23} \times M$ (and therefore by $\varphi$) may be significantly more complicated, but by construction identifies the puncture $\{3/4\} \times \del B_{23} \subset \Sigma_3$ with the puncture $\{1/4\} \times \del B_{23} \subset \Sigma_1$.
 Moreover, choose the embedding so that a cut system of $H_1$ drawn on each $\Sigma_i$ coincides with an obvious system of meridians.
 For $\Sigma_1$ and $\Sigma_3$, we require that the orientation induced by $H_1$ is the same as the orientation induced by the handlebodies they bound in $\R^3$.
 For $\Sigma_2$, the orientation induced by $H_1$ is opposite the orientation induced by the handlebody bounded in $\R^3$.
@@ -550,7 +555,8 @@ These are the curves bounding product disks in $I_{12} \times (\Sigma - D^2)$ an
 The cut system should be reflected about $\theta_2$ to match the embedding of $\Sigma_2$.
 \item Draw a $\gamma$ curve as a meridian of the tube connecting $\Sigma_2$ with either $\Sigma_1$ or $\Sigma_3$.
 The two choices are slide equivalent.
-\item Let $c_1,\cdots,c_{2g}$ be a set of disjoint nonseparating arcs in $\Sigma_3$ with their boundaries lying on the puncture of $\Sigma_3$ that is tubed to $\Sigma_1$.
+\item Let $c_1,\cdots,c_{2g}$ be a set of disjoint nonseparating arcs in $\Sigma_3$ with their boundaries lying on the puncture $\{3/4\} \times \del B_{23} \subset \Sigma_3$ that is tubed to the puncture $\{1/4\} \times \del B_{23} \subset \Sigma_1$.
+Recall that these two punctures are identified by $\varphi$ as per the discussion earlier.
 Then $\varphi(c_1),\cdots,\varphi(c_{2g})$ is a set of disjoint nonseparating arcs in $\Sigma_1$ with their boundaries lying on the puncture of $\Sigma_1$ that is tubed to $\Sigma_3$.
 Draw $2g$ disjoint nonseparating $\gamma$ curves by connecting up each $c_i$ with $\varphi(c_i)$ using two arcs in the tube between $\Sigma_1$ and $\Sigma_3$.
 If $a,b$ are the two endpoints of $c_i$, we connect $c_i$ and $\varphi(c_i)$ such that $a$ is connected to $\varphi(a)$ and $b$ to $\varphi(b)$.
