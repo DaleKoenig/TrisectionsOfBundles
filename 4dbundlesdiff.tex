@@ -1,7 +1,7 @@
  % --------------------------------------------------------------
 %DIF LATEXDIFF DIFFERENCE FILE
 %DIF DEL 4dbundlesinitial.tex   Mon Dec 23 13:05:42 2019
-%DIF ADD 4dbundles.tex          Mon Dec 23 14:33:20 2019
+%DIF ADD 4dbundles.tex          Mon Dec 23 15:55:56 2019
 % Copyright Dale Koenig 2018
 % --------------------------------------------------------------
 
@@ -600,11 +600,14 @@ Thus, we find that $\eta_{3 \to 1} = (\eta_{1 \to 3}^{-1} \circ \varphi)$.
 That is, to see how a curve or arc in $\Sigma_3$ gets mapped to $\Sigma_1$ by pushing it through $I_{23} \times \Sigma$, first apply $\varphi$ to it and then use the identification $\eta_{1 \to 3}^{-1}$ to bring it to $\Sigma_1$.
 }
 
+\DIFadd{Note that we can choose the punctures of $\Sigma_1$ and $\Sigma_3$ that are tubed together in a way that ensures that $\eta_{3 \to 1}$ identifies them.
+Indeed $\eta_{3 \to 1}$ is induced by $I_{23} \times M$, so if we choose a generic point $x \in \Sigma$, and choose the endpoints of $I_{23} \times \{x\}$ to be the punctures in $\Sigma_3$ and $\Sigma_1$, then they are identified by $\eta_{3 \to 1}$ as desired.
+}
+
 \DIFaddend Embed $\Sigma_1$, $\Sigma_2$ and $\Sigma_3$ into $\R^3$ along three axes $\theta_1,\theta_2$, $\theta_3$ evenly distributed in $\theta$ as in Figure \ref{embeddingsigmas}.
 We embed such that that rotating $\Sigma_1$ by $2\pi/3$ and then reflecting induces \DIFdelbegin \DIFdel{the natural identification between $\Sigma_1$ and $\Sigma_2$, while }\DIFdelend \DIFaddbegin \DIFadd{$\eta_{1 \to 2}$.
 Similarly }\DIFaddend rotating $\Sigma_1$ by $4\pi/3$ (\DIFaddbegin \DIFadd{with }\DIFaddend no reflection) induces \DIFdelbegin \DIFdel{the natural identification between $\Sigma_1$ and $\Sigma_3$.
 Moreover, }\DIFdelend \DIFaddbegin \DIFadd{$\eta_{1 \to 3}$.
-$\eta_{3 \to 1}$ may be significantly more complicated, but by construction identifies the puncture $\{3/4\} \times \del B_{23} \subset \Sigma_3$ with the puncture $\{1/4\} \times \del B_{23} \subset \Sigma_1$.
 We }\DIFaddend choose the embedding \DIFaddbegin \DIFadd{of $\Sigma_1$ }\DIFaddend so that a cut system of $H_1$ \DIFdelbegin \DIFdel{drawn on each $\Sigma_i$ }\DIFdelend coincides with an obvious system of meridians\DIFaddbegin \DIFadd{, and the simple nature of $\eta_{1 \to 2}$ and $\eta_{1 \to 3}$ ensures that this is true for our embeddings of $\Sigma_2$ and $\Sigma_3$ as well}\DIFaddend .
 For $\Sigma_1$ and $\Sigma_3$, we require that the orientation induced by $H_1$ is the same as the orientation induced by the handlebodies they bound in $\R^3$.
 For $\Sigma_2$, the orientation induced by $H_1$ is opposite the orientation induced by the handlebody bounded in $\R^3$.
