@@ -512,7 +512,7 @@ The composition $(\eta_{1 \to 3} \circ \eta_{3 \to 1})$ is the identification $\
 Thus, we find that $\eta_{3 \to 1} = (\eta_{1 \to 3}^{-1} \circ \varphi)$.
 That is, to see how a curve or arc in $\Sigma_3$ gets mapped to $\Sigma_1$ by pushing it through $I_{23} \times \Sigma$, first apply $\varphi$ to it and then use the identification $\eta_{1 \to 3}^{-1}$ to bring it to $\Sigma_1$.
 
-We can see now that the location that the punctures are drawn is not completely free.  Indeed, for any two punctures that are tubed together, drawing one of the two determines where we must draw the other.  So for example the punctures of $\Sigma_1$ and $\Sigma_2$ that are tubed together should be drawn so that they are identified by $\eta_{1 \to 2}$.  Now that $\eta_{1 \to 3}$ has been described, we can apply this to the punctures of $\Sigma_1$ and $\Sigma_3$ that are tubed together as well.
+The reader may have observed that the location the punctures are drawn is not completely free.  Indeed, for any two punctures that are tubed together, drawing one of the two determines where we must draw the other.  So for example the punctures of $\Sigma_1$ and $\Sigma_2$ that are tubed together should be drawn so that they are identified by $\eta_{1 \to 2}$.  Now that $\eta_{1 \to 3}$ has been described, we can apply this to the punctures of $\Sigma_1$ and $\Sigma_3$ that are tubed together as well.
 
 Embed $\Sigma_1$, $\Sigma_2$ and $\Sigma_3$ into $\R^3$ along three axes $\theta_1,\theta_2$, $\theta_3$ evenly distributed in $\theta$ as in Figure \ref{embeddingsigmas}.
 We embed such that that rotating $\Sigma_1$ by $2\pi/3$ and then reflecting induces $\eta_{1 \to 2}$.
@@ -694,10 +694,10 @@ Each compression decreases the genus of $X_1$ by 1.  We will find destabilizatio
 Consider a fixed value of $i$ such that $1 \le i \le g$, so $\alpha_i$ and $\beta_i$ are parallel and are both dual to $\gamma_i$.  Let $x \in \mathring I_{24}$ and look at a single slice $M_x = \{x\} \times M$.
 Then $M_x \cap X_1 = H_1 - B_{24}$, $M_x \cap X_2 = H_2 - B_{24}$, and $M_x \cap X_3 = B_{24}$.
 $M_x \cap \alpha_i = M_x \cap \beta_i$ is a pair of two points.
-We can connect these two points with an arc $c_\alpha$ in $(H_1 - B_{24}) \cap H_2 = M_x \cap X_1 \cap X_2$ and an arc $c_\beta$ in $B_{24} \cap (H_1 - B_{24}) = M_x \cap X_1 \cap X_3$.
-The union $c_\alpha \cup c_\beta$ is a simple closed curve in $\del (H_1 - B_{24})$, and this curve bounds a disk $D_i$ in $H_1 - B_{24}$.    See Figure \ref{getU} for reference.
-Indeed, $D_{\alpha_i} =  X_1 \cap X_2$ can be obtained by taking the union $\bigcup_{x \in I_{24}} c_\alpha$.
-$D_{\beta}$ is slightly more complicated, consisting of the union of $\bigcup_{x \in I_{24}} c_\beta$ together with copies of $D_i$ in each of $M_{2/5}$ and $M_{3/5}$.
+We can connect these two points with an arc $c_{\alpha_i}$ in $(H_1 - B_{24}) \cap H_2 = M_x \cap X_1 \cap X_2$ and an arc $c_{\beta_i}$ in $B_{24} \cap (H_1 - B_{24}) = M_x \cap X_1 \cap X_3$.
+The union $c_{\alpha_i} \cup c_{\beta_i}$ is a simple closed curve in $\del (H_1 - B_{24})$, and this curve bounds a disk $D_i$ in $H_1 - B_{24}$.    See Figure \ref{getU} for reference.
+Indeed, $D_{\alpha_i} =  X_1 \cap X_2$ can be obtained by taking the union $\bigcup_{x \in I_{24}} c_{\alpha_i}$.
+$D_{\beta_i}$ is slightly more complicated, consisting of the union of $\bigcup_{x \in I_{24}} c_{\beta_i}$ together with copies of $D_i$ in each of $M_{2/5}$ and $M_{3/5}$.
 
 The product $B_i = I_{24} \times D_i$ is the desired ball giving a destabilization.  Hence, the destabilization is achieved by setting
 
@@ -728,7 +728,7 @@ There are $g$ such destabilizations, so to get the final result we must find dis
 In the result of destabilization, $X_3' \cap M_x = B_{24} \cup \bigcup_{i=1}^g N(I_{24} \times D_i)$.
 This is a topological ball as can be seen in Figure \ref{getU} (the union of $B_{24}$ and regular neighborhoods of the disks in the figure).
 $X_1' \cap M_x$ consists of the complement of the disks $D_i$ in $H_1$, so it is also a topological ball.  
-We can then set  $U=X_1' \cap M_x$ and $V = X_3' \cap M_x$.  The boundary $U \cap V$ consists of four disks, two of which are shown in Figure \ref{fig_uvboundary}.  Figure \ref{fig_splittinguv} shows that by performing an isotopy, we can in fact achieve the same split $U \cap V$ as in Figure \ref{fig_disjointballs}.
+We can then set  $U=X_1' \cap M_x$ and $V = X_3' \cap M_x$.  The boundary $U \cap V$ consists of four disks, two of which are shown in Figure \ref{fig_uvboundary}.  Figure \ref{fig_splittinguv} shows that by performing an isotopy, this is in fact the same split $U \cap V$ as in Figure \ref{fig_disjointballs}.
 Thus, we have obtained the same genus $3g+1$ trisection as constructed in Section \ref{sec_mainthm}.
 
 \begin{figure}[h]

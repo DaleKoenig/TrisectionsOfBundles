@@ -1,7 +1,7 @@
  % --------------------------------------------------------------
 %DIF LATEXDIFF DIFFERENCE FILE
-%DIF DEL 4dbundlesinitial.tex   Mon Dec 23 13:05:42 2019
-%DIF ADD 4dbundles.tex          Mon Dec 23 15:55:56 2019
+%DIF DEL 4dbundlesinitial.tex   Sat Apr 18 23:39:58 2020
+%DIF ADD 4dbundles.tex          Sun May  3 18:26:26 2020
 % Copyright Dale Koenig 2018
 % --------------------------------------------------------------
 
@@ -153,17 +153,12 @@ We additionally describe an algorithm to draw a diagram for such a trisection gi
 \maketitle
 
 \section{Introduction}
-A \emph{trisection} of a closed, smooth, four dimensional manifold $X$ is a decomposition $X = X_1 \cup X_2 \cup X_3$ such that each $X_i$ is a 4--dimensional handlebody $\natural^{k_i} S^1 \times B^3$ and each pairwise intersection $X_i \cap X_j$, $i \not = j$ is a 3--dimensional handlebody $\natural^g S^1 \times D^2$.
-The triple intersection $X_1 \cap X_2 \cap X_3$ is necessarily a closed surface, and \DIFdelbegin \DIFdel{in fact }\DIFdelend \DIFaddbegin \DIFadd{by the first two conditions }\DIFaddend it induces a Heegaard splitting on each \DIFdelbegin \DIFdel{$X_i$.
-To see this, note that $X$ has no boundary so }\begin{displaymath}\DIFdel{\del X_1 = X_1 \cap \overline{(X - X_1)} = X_1 \cap (X_2 \cup X_3) = (X_1 \cap X_2) \cup (X_1 \cap X_3)}\end{displaymath}%DIFAUXCMD
-%DIFDELCMD <   %%%
-\DIFdel{Since $X_1 \cap X_2$ and $X_1 \cap X_3$ are both 3--dimensional handlebodies, this induces a Heegaard splitting of $\del X_1$.
-As the $X_i$ have disjoint interiors, $X_1 \cap X_2 \cap X_3 = \del(X_1 \cap X_2)$ is precisely the closed surface inducing the Heegaard surface.
-}\DIFdelend \DIFaddbegin \DIFadd{$\del X_i$.
-}\DIFaddend Let $g$ denote the genus of the trisection surface $X_1 \cap X_2 \cap X_3$\DIFdelbegin \DIFdel{, which by the above argument induces a Heegaard splitting of each $\del X_i$}\DIFdelend .
+A \emph{trisection} of a closed, smooth, \DIFdelbegin \DIFdel{four dimensional }\DIFdelend \DIFaddbegin \DIFadd{four--dimensional }\DIFaddend manifold $X$ is a decomposition $X = X_1 \cup X_2 \cup X_3$ such that each $X_i$ is a 4--dimensional handlebody $\natural^{k_i} S^1 \times B^3$ and each pairwise intersection $X_i \cap X_j$, $i \not = j$ is a 3--dimensional handlebody $\natural^g S^1 \times D^2$.
+The triple intersection $X_1 \cap X_2 \cap X_3$ is necessarily a closed surface, and by the first two conditions it induces a Heegaard splitting on each $\del X_i$.
+Let $g$ denote the genus of the trisection surface $X_1 \cap X_2 \cap X_3$.
 
 
-Since each $X_i$ is a four dimensional handlebody $\natural^{k_i} S^1 \times B^3$, $\del X_i$ is diffeomorphic to $\#^{k_i} S^1 \times S^2$.
+Since each $X_i$ is a \DIFdelbegin \DIFdel{four dimensional }\DIFdelend \DIFaddbegin \DIFadd{four--dimensional }\DIFaddend handlebody $\natural^{k_i} S^1 \times B^3$, $\del X_i$ is diffeomorphic to $\#^{k_i} S^1 \times S^2$.
 If $k_1 = k_2 = k_3$ then the trisection is called \emph{balanced} and we say that it is a $(g;k_1)$--trisection of $X$.
 Otherwise it is called \emph{unbalanced} and we say that it is a $(g;k_1,k_2,k_3)$--trisection of $X$.
 $g$ is called the \emph{genus} of the trisection.
@@ -176,7 +171,7 @@ We also will need to use the notion of (unbalanced) stabilization and destabiliz
 These are described in detail in \cite{MeierSchirmerZupan1}.
 Unbalanced stabilization can be performed directly in terms of trisection diagrams.
 If $X$ is a trisected 4--manifold, a diagram of the stabilized trisection can be obtained by connect summing a diagram of the original trisection with a genus 1 trisection diagram of $S^4$.
-There are three genus 1 trisections of $S^4$ up to isotopy (see Figure \ref{s3g1}), and thus three possible unbalanced stabilizations.
+There are three genus 1 trisections of $S^4$ up to \DIFdelbegin \DIFdel{isotopy }\DIFdelend \DIFaddbegin \DIFadd{diffeomorphism }\DIFaddend (see Figure \ref{s3g1}), and thus three possible unbalanced stabilizations.
 We can similarly view destabilization in terms of diagrams.
 Suppose we have a trisection diagram given by surface $\Sigma$ and cut systems $\alpha,\beta,\gamma$.
 Suppose there is some simple closed curve $C$ in $\Sigma$ that cuts off a genus 1 trisection diagram of $S^4$.
@@ -292,9 +287,9 @@ Let $N_{ij}$ denote $I_{ij} \times B_{ij}$, so $N_{ij}$ is a topological 4--ball
 Define:
 
 \begin{align*}
-&X_1 = (R_1 \cup N_{23}) \DIFdelbegin \DIFdel{\backslash }\DIFdelend \DIFaddbegin \DIFadd{- }\DIFaddend (\mathring N_{12} \cup \mathring N_{13}) \\
-&X_2 = (R_2 \cup N_{13}) \DIFdelbegin \DIFdel{\backslash }\DIFdelend \DIFaddbegin \DIFadd{- }\DIFaddend (\mathring N_{12} \cup \mathring N_{23}) \\
-&X_3 = (R_3 \cup N_{12}) \DIFdelbegin \DIFdel{\backslash }\DIFdelend \DIFaddbegin \DIFadd{- }\DIFaddend (\mathring N_{13} \cup \mathring N_{23})
+&X_1 = (R_1 \cup N_{23}) - (\mathring N_{12} \cup \mathring N_{13}) \\
+&X_2 = (R_2 \cup N_{13}) - (\mathring N_{12} \cup \mathring N_{23}) \\
+&X_3 = (R_3 \cup N_{12}) - (\mathring N_{13} \cup \mathring N_{23})
 \end{align*}
 
 Note the similarity to the definition of stabilization of trisections in \cite{GayKirby1}.
@@ -307,7 +302,7 @@ The argument for the other two pairwise intersections is identical.
 $X_1 \cap X_2$ consists of the following parts:
 
 \begin{itemize}
-\item A copy of \DIFdelbegin \DIFdel{$I_{12} \times (\Sigma - B_{12} \cap \Sigma)$ }\DIFdelend \DIFaddbegin \DIFadd{$I_{12} \times (\Sigma - B_{12})$ }\DIFaddend coming from the horizontal segment between $R_1$ and $R_2$.
+\item A copy of $I_{12} \times (\Sigma - B_{12})$ coming from the horizontal segment between $R_1$ and $R_2$.
 This is the product of an interval and a punctured genus $g$ surface, and is therefore a genus $2g$ handlebody.
 
 \item A copy of $H$ coming from the vertical segment between the $R_1$ and $R_2$ labelled regions.
@@ -316,8 +311,8 @@ This is a genus $g$ handlebody.
 \item A topological 3--ball $B_b$ coming from $N_{23} \cap X_2$.
 \end{itemize}
 
-$B_a$ intersects \DIFdelbegin \DIFdel{the $I_{12} \times \Sigma - (B_{12} \cap \Sigma)$ }\DIFdelend \DIFaddbegin \DIFadd{each of the $I_{12} \times (\Sigma - B_{12})$ }\DIFaddend component and the $H$ component of $X_1 \cap X_2$ in a 2--dimensional disk\DIFdelbegin \DIFdel{each}\DIFdelend .
-The same is true of $B_b$, so both $B_a$ and $B_b$ can be thought of as 3--dimensional 1--handles connecting the \DIFdelbegin \DIFdel{$I_{12} \times (\Sigma - B_{12} \cap \Sigma)$ }\DIFdelend \DIFaddbegin \DIFadd{$I_{12} \times (\Sigma - B_{12})$ }\DIFaddend and $H$ components.
+$B_a$ intersects each of the $I_{12} \times (\Sigma - B_{12})$ component and the $H$ component of $X_1 \cap X_2$ in a 2--dimensional disk.
+The same is true of $B_b$, so both $B_a$ and $B_b$ can be thought of as 3--dimensional 1--handles connecting the $I_{12} \times (\Sigma - B_{12})$ and $H$ components.
 $X_1 \cap X_2$ then consists of a genus $2g$ and a genus $g$ handlebody connected by two different 1--handles, resulting in a genus $3g+1$ handlebody.
 
 
@@ -354,20 +349,20 @@ Then let $R_U = I_{24}  \times U$ and $R_V = I_{24} \times V$.
 \centering
 \includegraphics[height=1.6in]{disjointballs.png}
 \caption{$H_1$ is decomposed as $U \cup V$ such that $U \cap V$ consists of $g+1$ disjoint disks.
-$B_{13}$, $B_{23a}$, and $B_{23b}$ are chosen to be disjoint balls in $H_1 \cup H_2$, each intersecting $\Sigma$ in a disk, such that $B_{23a}$ and $B_{23b}$ intersect $V$ while $B_{13}$ intersects $U$.}
+$B_{13}$, $B_{23a}$, and $B_{23b}$ are chosen to be disjoint balls in $H_1 \cup H_2$, each intersecting $\Sigma$ in a disk, such that $B_{23a}$ and $B_{23b}$ intersect \DIFdelbeginFL \DIFdelFL{$V$ while $B_{13}$ intersects }\DIFdelendFL $U$.}
 \label{fig_disjointballs}
 \end{figure}
 
 
 Now as in the first case choose three small disjoint balls $B_{23a}$, $B_{23b}$ and $B_{13}$ in $M$, each intersecting the Heegaard surface $\Sigma$ in a single disk.
-We further require that $B_{23a} \cap H_1$ and $B_{23b} \cap H_1$ lie in $U$, while $B_{13} \cap H_1$ lies in $V$ (see Figure \ref{fig_disjointballs}).
+We further require that $B_{23a} \cap H_1$ and $B_{23b} \cap H_1$ lie in $U$ \DIFdelbegin \DIFdel{, while $B_{13} \cap H_1$ lies in $V$ }\DIFdelend (see Figure \ref{fig_disjointballs}).
 Define $N_{23a} = I_{23a} \times B_{23a}$ and define $N_{23b}$ and $N_{13}$ similarly.
 Then the trisection is given by:
 
 \begin{align*}
-&X_1 = (R_1 \cup R_U \cup N_{23a} \cup N_{23b}) \DIFdelbegin \DIFdel{\backslash }\DIFdelend \DIFaddbegin \DIFadd{- }\DIFaddend (\mathring N_{13}) \\
-&X_2 = (R_2 \cup N_{13}) \DIFdelbegin \DIFdel{\backslash }\DIFdelend \DIFaddbegin \DIFadd{- }\DIFaddend (\mathring N_{23a} \cup \mathring N_{23b}) \\
-&X_3 = (R_3 \cup R_V) \DIFdelbegin \DIFdel{\backslash }\DIFdelend \DIFaddbegin \DIFadd{- }\DIFaddend (\mathring N_{13} \cup \mathring N_{23a} \cup \mathring N_{23b})
+&X_1 = (R_1 \cup R_U \cup N_{23a} \cup N_{23b}) - (\mathring N_{13}) \\
+&X_2 = (R_2 \cup N_{13}) - (\mathring N_{23a} \cup \mathring N_{23b}) \\
+&X_3 = (R_3 \cup R_V) - (\mathring N_{13} \cup \mathring N_{23a} \cup \mathring N_{23b})
 \end{align*}
 
 Each $X_i$ is the union of $I \times H$ with one extra four dimensional 1--handle attaching to $\{0\} \times H$ and $\{1\} \times H$.
@@ -399,10 +394,10 @@ The union of the genus $g$ handlebodies with $I_{23a} \times B^2$  and $I_{23b} 
 $X_1 \cap X_3$ breaks down as:
 
 \begin{itemize}
-\item \DIFdelbegin \DIFdel{$I_{13} \times (\Sigma - \Sigma \cap B_{13})$ }\DIFdelend \DIFaddbegin \DIFadd{$I_{13} \times (\Sigma - B_{13})$ }\DIFaddend coming from the horizontal segment between $R_1$ and $R_3$.
+\item $I_{13} \times (\Sigma - B_{13})$ coming from the horizontal segment between $R_1$ and $R_3$.
 This is the product of an interval and a punctured genus $g$ surface, so it is a genus $2g$ handlebody.
 
-\item A copy of $U$ (a three dimensional ball) lying at each of the two vertical \DIFdelbegin \DIFdel{boundaries }\DIFdelend \DIFaddbegin \DIFadd{segments }\DIFaddend between $R_3$ and $R_4$.
+\item A copy of $U$ (a three dimensional ball) lying at each of the two vertical segments between $R_3$ and $R_4$.
 \item Two topological 3--balls $I_{23a} \times B^2$ and $I_{23b} \times B^2$ from $N_{23a} \cap R_3$ and $N_{23b} \cap R_3$.
 \item $g+1$ copies of $I_{24} \times B^2$ coming from $R_U \cap R_V$.
 \end{itemize}
@@ -411,19 +406,19 @@ This is the product of an interval and a punctured genus $g$ surface, so it is a
 The union of the two copies of $U$ with the $g+1$ copies of $I_{24} \times B^2$ is a genus $g$ 3--dimensional handlebody.
 Indeed, each copy of $I_{24} \times B^2$ intersects each copy of $U$ in a single disk, and therefore can be viewed as a 1--handle connecting the two copies of $U$.
 The union is then the result of connecting two balls by $g+1$ disjoint 1--handles.
-$I_{23a} \times B^2$ and $I_{23b} \times B^2$ each intersect one copy of $U$ in a disk, and \DIFdelbegin \DIFdel{$I_{13} \times (\Sigma - \Sigma \cap B_{13})$ }\DIFdelend \DIFaddbegin \DIFadd{$I_{13} \times (\Sigma - B_{13})$ }\DIFaddend in another disk.
+$I_{23a} \times B^2$ and $I_{23b} \times B^2$ each intersect one copy of $U$ in a disk, and $I_{13} \times (\Sigma - B_{13})$ in another disk.
  We then have the a genus $g$ and genus $2g$ handlebody connected by two 1--handles, so the result is then a genus $3g+1$ handlebody.
 
 Lastly, $X_2 \cap X_3$ breaks down as:
 \begin{itemize}
-\item \DIFdelbegin \DIFdel{$I_{23a} \times (\Sigma - \Sigma \cap B_{23a})$ and $I_{23b} \times (\Sigma - \Sigma \cap B_{23b})$ }\DIFdelend \DIFaddbegin \DIFadd{$I_{23a} \times (\Sigma - B_{23a})$ and $I_{23b} \times (\Sigma - B_{23b})$ }\DIFaddend coming from the horizontal segments between $R_2$ and $R_3$.
+\item $I_{23a} \times (\Sigma - B_{23a})$ and $I_{23b} \times (\Sigma - B_{23b})$ coming from the horizontal segments between $R_2$ and $R_3$.
 \item A topological 3--ball $I_{13} \times B^2$ coming from $N_{13} \cap R_3$.
 \item The product $I_{24} \times \Sigma_{0,g+1}$ of an interval and a $g+1$ punctured sphere, coming from the intersection of $R_V$ and $X_2$.
 This piece is diffeomorphic to a genus $g$ handlebody.
 \end{itemize}
 
 Note that $\Sigma - B^2$ can be obtained from the $g+1$ punctured sphere by attaching $g$ additional two dimensional 1--handles.
-$$\DIFaddbegin \left[ \DIFaddend I_{24} \times \Sigma_{0,g+1} \DIFaddbegin \right] \DIFaddend \cup \DIFaddbegin \left[ \DIFaddend I_{23a} \times (\Sigma - \DIFdelbegin \DIFdel{\Sigma \cap }\DIFdelend B_{23a}) \DIFaddbegin \right] \DIFaddend \cup \DIFaddbegin \left[ \DIFaddend I_{23b} \times (\Sigma - \DIFdelbegin \DIFdel{\Sigma \cap }\DIFdelend B_{23b}) \DIFaddbegin \right]\DIFaddend $$ deformation retracts onto $$\DIFaddbegin \left[ \DIFaddend I_{24} \times \Sigma_{0,g+1} \DIFaddbegin \right] \DIFaddend \cup \DIFaddbegin \left[ \DIFaddend \{2/5\} \times (\Sigma - \DIFdelbegin \DIFdel{\Sigma \cap }\DIFdelend B_{23a}) \DIFaddbegin \right] \DIFaddend \cup \DIFaddbegin \left[ \DIFaddend \{3/5\} \times (\Sigma - \DIFdelbegin \DIFdel{\Sigma \cap }\DIFdelend B_{23b}) \DIFaddbegin \right]\DIFaddend $$ so it can be built from $I_{24} \times \Sigma_{0,g+1}$ by attaching $g$ 1--handles at each end of $I_{24} \times \Sigma_{0,g+1}$, giving a genus $3g$ handlebody.
+$$\left[ I_{24} \times \Sigma_{0,g+1} \right] \cup \left[ I_{23a} \times (\Sigma - B_{23a}) \right] \cup \left[ I_{23b} \times (\Sigma - B_{23b}) \right]$$ deformation retracts onto $$\left[ I_{24} \times \Sigma_{0,g+1} \right] \cup \left[ \{2/5\} \times (\Sigma - B_{23a}) \right] \cup \left[ \{3/5\} \times (\Sigma - B_{23b}) \right]$$ so it can be built from $I_{24} \times \Sigma_{0,g+1}$ by attaching $g$ 1--handles at each end of $I_{24} \times \Sigma_{0,g+1}$, giving a genus $3g$ handlebody.
 The copy of $I_{13} \times B^2$ then adds one more to the genus, for $3g+1$ total.
 
 
@@ -464,8 +459,8 @@ In figures we always choose embeddings of this sort, so the curves bounding disk
 
 We can now analyze how to obtain cut systems from the regions $R_i$ in the previous section.
 Let $M = H_1 \cup H_2$ be a 3--manifold with a Heegaard splitting.
-Consider the rectangular \DIFdelbegin \DIFdel{regionshown }\DIFdelend \DIFaddbegin \DIFadd{regions shown }\DIFaddend in in Figure \ref{sectionbreakdown}.
-Recall that this rectangle is the image of a map $F\colon I \times M \to I \times I$, where $F(t,x) = (t,h(x))$ with $h\colon M \to I$ a self indexing mose function on $M$.
+Consider the rectangular regions shown in in Figure \ref{sectionbreakdown}.
+Recall that this rectangle is the image of a map $F\colon I \times M \to I \times I$, where $F(t,x) = (t,h(x))$ with $h\colon M \to I$ a self indexing \DIFdelbegin \DIFdel{mose }\DIFdelend \DIFaddbegin \DIFadd{Morse }\DIFaddend function on $M$.
 We see two vertical line segments in Figure \ref{sectionbreakdown}, the vertical components of $R_1 \cap R_3$ and of $R_2 \cap R_3$.
 Pulling back the left vertical line segment by $F$ corresponds to a copy of $H_1$ and pulling back the right to a copy of $H_2$.
 We will work through this example in depth, and then comment on how to extend to other cases.
@@ -482,28 +477,28 @@ In constructing (a restriction of) a trisection from Figure \ref{sectionbreakdow
 Letting $N_{13} = I_{13} \times B_{13}$, $N_{12} = I_{12} \times B_{12}$, and $N_{23} = I_{23} \times B_{23}$ to $X_1$, we can define
 
 \begin{align*}
-&X_1 = (R_1 \cup N_{23}) \DIFdelbegin \DIFdel{\backslash }\DIFdelend \DIFaddbegin \DIFadd{- }\DIFaddend (\mathring N_{12} \cup \mathring N_{13}) \\
-&X_2 = (R_2 \cup N_{13}) \DIFdelbegin \DIFdel{\backslash }\DIFdelend \DIFaddbegin \DIFadd{- }\DIFaddend (\mathring N_{12} \cup \mathring N_{23}) \\
-&X_3 = (R_3 \cup N_{12}) \DIFdelbegin \DIFdel{\backslash }\DIFdelend \DIFaddbegin \DIFadd{- }\DIFaddend (\mathring N_{13} \cup \mathring N_{23})
+&X_1 = (R_1 \cup N_{23}) - (\mathring N_{12} \cup \mathring N_{13}) \\
+&X_2 = (R_2 \cup N_{13}) - (\mathring N_{12} \cup \mathring N_{23}) \\
+&X_3 = (R_3 \cup N_{12}) - (\mathring N_{13} \cup \mathring N_{23})
 \end{align*}
 
 Let us analyze how the trisection surface $X_1 \cap X_2 \cap X_3$ intersects the pull back of each vertical cross section.
 Let $M_t = \{t\} \times M$ denote the pullback $F^{-1}(\{t\} \times I)$.
 If $t$ lies in the interior of $I_{23}$, then $M_t \cap X_1$ is the 3--ball $B_{23}$.
-\DIFdelbegin \DIFdel{The top of the boundary intersects }\DIFdelend \DIFaddbegin \DIFadd{$\del B_{23}$ decomposes into two disks, one intersecting }\DIFaddend $R_2$ \DIFdelbegin \DIFdel{while the bottom intersects }\DIFdelend \DIFaddbegin \DIFadd{and one intersecting }\DIFaddend $R_3$.
+$\del B_{23}$ decomposes into two disks, one intersecting $R_2$ and one intersecting $R_3$.
 The meridian circle $\del B_{23} \cap \Sigma$ lies in the triple intersection.
-Similarly if $t$ lies in the interior of \DIFdelbegin \DIFdel{$I_{23}$ then the contribution to the triple intersection is $\del B_{12} \cap \Sigma$, }\DIFdelend \DIFaddbegin \DIFadd{$I_{12}$ then $M_t \cap (X_1 \cap X_2 \cap X_3) = \del B_{12} \cap \Sigma$, which is }\DIFaddend homeomorphic to $S^1$.
+Similarly if $t$ lies in the interior of $I_{12}$ then $M_t \cap (X_1 \cap X_2 \cap X_3) = \del B_{12} \cap \Sigma$, which is homeomorphic to $S^1$.
 If it lies in the interior of $I_{13}$ it is the circle $\del B_{13} \cap \Sigma$.
 Thus in the interior $\mathring I_{ij} \times M$ of each $I_{ij} \times M$ region the triple intersection is the open cylinder $\bigcup_{x \in \mathring I_{ij}} S^1$.
 
 
-$R_1 \cap R_2 \cap R_3$ consists of two points in the figure, which pull back under $F$ to two copies of $\Sigma$.
-We call the pullback of the left point of $R_1 \cap R_2 \cap R_3$ \DIFdelbegin \DIFdel{by }\DIFdelend $\Sigma_1$, and the pullback of the right point \DIFdelbegin \DIFdel{by }\DIFdelend $\Sigma_2$.
+\DIFaddbegin \DIFadd{The intersection }\DIFaddend $R_1 \cap R_2 \cap R_3$ consists of two points in the figure, which pull back under $F$ to two copies of $\Sigma$.
+We call the pullback of the left point \DIFdelbegin \DIFdel{of $R_1 \cap R_2 \cap R_3$ }\DIFdelend $\Sigma_1$ \DIFdelbegin \DIFdel{, }\DIFdelend and the pullback of the right point $\Sigma_2$.
 After adding the tubes $N_{ij}$, $\Sigma_1$ has punctures $B_{23} \cap \Sigma_1$ and $B_{12} \cap \Sigma_1$, while $\Sigma_2$ has punctures $B_{13} \cap \Sigma_2$ and $B_{12} \cap \Sigma_2$.
-The $B_{12} \cap \Sigma_i$ punctures of the two surfaces are connected by the open tube in \DIFdelbegin \DIFdel{$I_{12} \cap M$}\DIFdelend \DIFaddbegin \DIFadd{$I_{12} \times M$}\DIFaddend .
- The part of the triple intersection in lying the pullback of the figure therefore is a twice punctured genus-$2g$ surface as seen in Figure \ref{fig_coresubsurface}.
+The $B_{12} \cap \Sigma_i$ punctures of the two surfaces are connected by the open tube in $I_{12} \times M$.
+ The part of the triple intersection \DIFdelbegin \DIFdel{in lying }\DIFdelend \DIFaddbegin \DIFadd{lying in }\DIFaddend the pullback of the figure therefore is a twice punctured genus-$2g$ surface as seen in Figure \ref{fig_coresubsurface}.
 When drawing $\Sigma_1$ and $\Sigma_2$, we embed into $\R^3$ such that obvious meridians correspond to curves bounding disks in $H_1$.
-That is, \DIFdelbegin \DIFdel{a }\DIFdelend \DIFaddbegin \DIFadd{if we view the surface as the boundary, minus some disks, of a standardly embedded handlebody in $\R^3$, then a }\DIFaddend simple closed curve bounds a disk in \DIFdelbegin \DIFdel{$\R^3$ in the embedding }\DIFdelend \DIFaddbegin \DIFadd{that handlebody }\DIFaddend if and only if it bounds a disk in $H_1$ when considered to be a (punctured) Heegaard surface for $M$.
+That is, if we view the surface as the boundary, minus some disks, of a standardly embedded handlebody in $\R^3$, then a simple closed curve bounds a disk in that handlebody if and only if it bounds a disk in $H_1$ when considered to be a (punctured) Heegaard surface for $M$.
 Additionally, we choose the embedding so that the orientation induced by $H_1$ on each $\Sigma_i$ is the same as the orientation induced by the handlebody it bounds in the embedding into $\R^3$.
 This forces the drawn portion of the trisection surface to be immersed rather than embedded, as the tube connecting $\Sigma_1$ and $\Sigma_2$ must pass through one of the copies of $\Sigma_i$ as depicted in Figure \ref{fig_coresubsurface}.
 After determining cut systems bounding curves in each $X_i \cap X_j$, we will remap the surface into $\R^3$ to get an embedding.
@@ -511,7 +506,7 @@ After determining cut systems bounding curves in each $X_i \cap X_j$, we will re
 \begin{figure}[h]
 \centering
 \includegraphics[height=1.6in]{coresubsurface.png}
-\caption{A restricted section of the spine.}
+\caption{A restricted section of the \DIFdelbeginFL \DIFdelFL{spine}\DIFdelendFL \DIFaddbeginFL \DIFaddFL{trisection surface}\DIFaddendFL .}
 \label{fig_coresubsurface}
 \end{figure}
 
@@ -532,11 +527,11 @@ Hence, the location of the punctures on a copy of $\Sigma$ with respect to the c
 However, we require that the two punctures on the two copies of $\Sigma$ connected by the tube are in the same place on their respective copy of $\Sigma$.
 
 
-It remains to draw the $\alpha$ \DIFdelbegin \DIFdel{curve }\DIFdelend \DIFaddbegin \DIFadd{curves }\DIFaddend bounding disks in the $I_{12} \times (\Sigma - B_{12} \cap \Sigma)$ section of $X_1 \cap X_2$.
+It remains to draw the $\alpha$ curves bounding disks in the $I_{12} \times (\Sigma - B_{12} \cap \Sigma)$ section of $X_1 \cap X_2$.
  Let $c$ be an arc in $\Sigma$ with interior disjoint from the three $B_{ij} \cap \Sigma$ disks, and endpoints lying on the puncture $\del B_{12} \cap \Sigma$.
 $I_{12} \times c$ is then a topological disk lying in $I_{12} \times (\Sigma - B_{12} \cap \Sigma)$.
 The boundary of the disk consists of a copy of $c$ in each of $\Sigma_1$ and $\Sigma_2$ and the pair of arcs $I_{12} \times \del c$ connecting them.
-This is true regardless of the choice of $c$, so in fact choosing \DIFaddbegin \DIFadd{a nonseparating collection of }\DIFaddend $2g$ such arcs \DIFdelbegin \DIFdel{, nonparallel }\DIFdelend in $\Sigma - B_{12} \cap \Sigma$ \DIFdelbegin \DIFdel{, }\DIFdelend will result in $2g$ such $\alpha$ curves.
+This is true regardless of the choice of $c$, so in fact choosing a nonseparating collection of $2g$ such arcs in $\Sigma - B_{12} \cap \Sigma$ will result in $2g$ such $\alpha$ curves.
 The result after drawing one such curve is shown in Figure \ref{fig_coresubsurfacediagram}.
 The figure uses the simplest case of $M = S^3$, so the $\gamma$ curve cut system for $H_2$ consists of longitude curves.
 In this and future diagrams, $\alpha$ curves are drawn in red, $\beta$ in blue, and $\gamma$ in green, easily remembered since (b)eta curves are (b)lue and (g)amma curves (g)reen.
@@ -560,16 +555,16 @@ The resulting partial diagram obtained from reflecting $\Sigma_2$ in Figure \ref
 \includegraphics[height=1.6in]{coresubsurfacediagram_embedded.png}
 \caption{The result of remapping so that the surface is embedded.
 The $\alpha$ curve passing through the tube is now symmetric.
-The diagram could be completed by extending to a \DIFdelbeginFL \DIFdelFL{set }\DIFdelendFL \DIFaddbeginFL \DIFaddFL{nonseparating collection }\DIFaddendFL of four \DIFdelbeginFL \DIFdelFL{nonisotopic }\DIFdelendFL disjoint symmetric $\alpha$ curves.}
+The diagram could be completed by extending to a nonseparating collection of four disjoint symmetric $\alpha$ curves.}
 \label{fig_coresubsurfacediagram_embedded}
 \end{figure}
 
 We now comment on the other possible cases.
-In \DIFdelbegin \DIFdel{Diagram }\DIFdelend \DIFaddbegin \DIFadd{Figure }\DIFaddend \ref{sectionbreakdown}, the left vertical line segment pulls back under $F$ to a copy of $H_1$ in the spine, while the right pulls back to a copy of $H_2$.
-The resulting trisection diagram therefore \DIFdelbegin \DIFdel{had }\DIFdelend \DIFaddbegin \DIFadd{has }\DIFaddend a cut system for $H_1$ on $\Sigma_1$, and a (reflected) cut system for $H_2$ on $\Sigma_2$.
+In Figure \ref{sectionbreakdown}, the left vertical line segment pulls back under $F$ to a copy of $H_1$ in the spine, while the right pulls back to a copy of $H_2$.
+The resulting trisection diagram therefore has a cut system for $H_1$ on $\Sigma_1$, and a (reflected) cut system for $H_2$ on $\Sigma_2$.
 The same method works as long as the cut systems are chosen to match with the vertical line segment.
-If the left vertical line segment \DIFdelbegin \DIFdel{corresponded }\DIFdelend \DIFaddbegin \DIFadd{corresponds }\DIFaddend to $H_2$, we \DIFdelbegin \DIFdel{would have drawn }\DIFdelend \DIFaddbegin \DIFadd{draw }\DIFaddend a cut system for $H_2$ on $\Sigma_1$.
-Similarly if the right vertical segment \DIFdelbegin \DIFdel{corresponded }\DIFdelend \DIFaddbegin \DIFadd{corresponds }\DIFaddend to $H_1$, we \DIFdelbegin \DIFdel{would have drawn }\DIFdelend \DIFaddbegin \DIFadd{draw }\DIFaddend a reflected cut system for $H_1$ on $\Sigma_2$.
+If the left vertical line segment corresponds to $H_2$, we draw a cut system for $H_2$ on $\Sigma_1$.
+Similarly if the right vertical segment corresponds to $H_1$, we draw a reflected cut system for $H_1$ on $\Sigma_2$.
 Lastly, shuffling the indices of the regions $R_i$ will recolor the curves, switching $\alpha$, $\beta$, and $\gamma$ curves, but will not change curves of the diagram themselves.
 
 %%%%%%%%%
@@ -585,30 +580,27 @@ As before, it is easier to start with the case where $\varphi$ flips the Heegaar
 
 We begin by recalling the form of triple intersection surface.
 Each triple intersection corner in Figure \ref{flippablebreakdown} gives a twice punctured copy of $\Sigma$, and the horizontal segments connecting two corners give tubes connecting the appropriate copies of $\Sigma$.
-The trisection surface $X_1 \cap X_2 \cap X_3$ then consists of three copies of $\Sigma$ connected up by three tubes.
+The trisection surface $X_1 \cap X_2 \cap X_3$ then consists of three copies of $\Sigma$ connected \DIFdelbegin \DIFdel{up }\DIFdelend by three tubes.
 This results in a genus $3g+1$ surface.
 We construct the diagram keeping this in mind, drawing three copies of $\Sigma$ and connecting them with tubes.
 
 
 Let $\Sigma_1$, $\Sigma_2$, and $\Sigma_3$ be the (twice punctured) copies of $\Sigma$ lying at the three triple intersection corners from left to right.
 So $\Sigma_1$ is a twice punctured Heegaard surface of $M_{1/4}$, $\Sigma_2$ of $M_{1/2}$, and $\Sigma_3$ of $M_{3/4}$.
-\DIFdelbegin \DIFdel{There is }\DIFdelend \DIFaddbegin \DIFadd{The product $[1/4, 3/4] \times M$ induces }\DIFaddend a natural identification between \DIFdelbegin \DIFdel{these three copies of $M$, and this induces }\DIFdelend \DIFaddbegin \DIFadd{$M_{1/4}$, $M_{1/2}$, and $M_{3/4}$, and restricting to $\Sigma$ gives }\DIFaddend a natural identification between the three $\Sigma_i$.
-\DIFaddbegin \DIFadd{We denote these identifications as $\eta_{1 \to 2}\colon \Sigma_1 \to \Sigma_2$, $\eta_{1 \to 3}\colon \Sigma_1 \to \Sigma_3$, and $\eta_{2 \to 3}\colon \Sigma_2 \to \Sigma_3$.
+The product $[1/4, 3/4] \times M$ induces a natural identification between $M_{1/4}$, $M_{1/2}$, and $M_{3/4}$, and restricting to $\Sigma$ gives a natural identification between the three $\Sigma_i$.
+We denote these identifications as $\eta_{1 \to 2}\colon \Sigma_1 \to \Sigma_2$, $\eta_{1 \to 3}\colon \Sigma_1 \to \Sigma_3$, and $\eta_{2 \to 3}\colon \Sigma_2 \to \Sigma_3$.
 $I_{23} \times M$ induces a different identification $\eta_{3 \to 1}$ between $M_{3/4}$ and $M_{1/4}$, and this also restricts to give an identification of $\Sigma_3$ and $\Sigma_1$.
 The composition $(\eta_{1 \to 3} \circ \eta_{3 \to 1})$ is the identification $\Sigma_3 \to \Sigma_3$ given by going once around the base $S_1$ of the fiber bundle, which is precisely $\varphi$.
 Thus, we find that $\eta_{3 \to 1} = (\eta_{1 \to 3}^{-1} \circ \varphi)$.
 That is, to see how a curve or arc in $\Sigma_3$ gets mapped to $\Sigma_1$ by pushing it through $I_{23} \times \Sigma$, first apply $\varphi$ to it and then use the identification $\eta_{1 \to 3}^{-1}$ to bring it to $\Sigma_1$.
-}
 
-\DIFadd{Note that we can choose the punctures of $\Sigma_1$ and $\Sigma_3$ that are tubed together in a way that ensures that $\eta_{3 \to 1}$ identifies them.
-Indeed $\eta_{3 \to 1}$ is induced by $I_{23} \times M$, so if we choose a generic point $x \in \Sigma$, and choose the endpoints of $I_{23} \times \{x\}$ to be the punctures in $\Sigma_3$ and $\Sigma_1$, then they are identified by $\eta_{3 \to 1}$ as desired.
-}
+\DIFdelbegin \DIFdel{Note that we can choose the }\DIFdelend \DIFaddbegin \DIFadd{The reader may have observed that the location the punctures are drawn is not completely free.  Indeed, for any two punctures that are tubed together, drawing one of the two determines where we must draw the other.  So for example the }\DIFaddend punctures of $\Sigma_1$ and \DIFdelbegin \DIFdel{$\Sigma_3$ }\DIFdelend \DIFaddbegin \DIFadd{$\Sigma_2$ }\DIFaddend that are tubed together \DIFdelbegin \DIFdel{in a way that ensures that $\eta_{3 \to 1}$ identifies them.
+Indeed $\eta_{3 \to 1}$ is induced by $I_{23} \times M$, so if we choose a generic point $x \in \Sigma$, and choose the endpoints of $I_{23} \times \{x\}$ to be the punctures in $\Sigma_3$ and }\DIFdelend \DIFaddbegin \DIFadd{should be drawn so that they are identified by $\eta_{1 \to 2}$.  Now that $\eta_{1 \to 3}$ has been described, we can apply this to the punctures of }\DIFaddend $\Sigma_1$ \DIFdelbegin \DIFdel{, then they are identified by $\eta_{3 \to 1}$ as desired}\DIFdelend \DIFaddbegin \DIFadd{and $\Sigma_3$ that are tubed together as well}\DIFaddend .
 
-\DIFaddend Embed $\Sigma_1$, $\Sigma_2$ and $\Sigma_3$ into $\R^3$ along three axes $\theta_1,\theta_2$, $\theta_3$ evenly distributed in $\theta$ as in Figure \ref{embeddingsigmas}.
-We embed such that that rotating $\Sigma_1$ by $2\pi/3$ and then reflecting induces \DIFdelbegin \DIFdel{the natural identification between $\Sigma_1$ and $\Sigma_2$, while }\DIFdelend \DIFaddbegin \DIFadd{$\eta_{1 \to 2}$.
-Similarly }\DIFaddend rotating $\Sigma_1$ by $4\pi/3$ (\DIFaddbegin \DIFadd{with }\DIFaddend no reflection) induces \DIFdelbegin \DIFdel{the natural identification between $\Sigma_1$ and $\Sigma_3$.
-Moreover, }\DIFdelend \DIFaddbegin \DIFadd{$\eta_{1 \to 3}$.
-We }\DIFaddend choose the embedding \DIFaddbegin \DIFadd{of $\Sigma_1$ }\DIFaddend so that a cut system of $H_1$ \DIFdelbegin \DIFdel{drawn on each $\Sigma_i$ }\DIFdelend coincides with an obvious system of meridians\DIFaddbegin \DIFadd{, and the simple nature of $\eta_{1 \to 2}$ and $\eta_{1 \to 3}$ ensures that this is true for our embeddings of $\Sigma_2$ and $\Sigma_3$ as well}\DIFaddend .
+Embed $\Sigma_1$, $\Sigma_2$ and $\Sigma_3$ into $\R^3$ along three axes $\theta_1,\theta_2$, $\theta_3$ evenly distributed in $\theta$ as in Figure \ref{embeddingsigmas}.
+We embed such that that rotating $\Sigma_1$ by $2\pi/3$ and then reflecting induces $\eta_{1 \to 2}$.
+Similarly rotating $\Sigma_1$ by $4\pi/3$ (with no reflection) induces $\eta_{1 \to 3}$.
+We choose the embedding of $\Sigma_1$ so that a cut system of $H_1$ coincides with an obvious system of meridians, and the simple nature of $\eta_{1 \to 2}$ and $\eta_{1 \to 3}$ ensures that this is true for our embeddings of $\Sigma_2$ and $\Sigma_3$ as well.
 For $\Sigma_1$ and $\Sigma_3$, we require that the orientation induced by $H_1$ is the same as the orientation induced by the handlebodies they bound in $\R^3$.
 For $\Sigma_2$, the orientation induced by $H_1$ is opposite the orientation induced by the handlebody bounded in $\R^3$.
 
@@ -616,8 +608,8 @@ For $\Sigma_2$, the orientation induced by $H_1$ is opposite the orientation ind
 \centering
 \includegraphics[height=3in]{sigmas.png}
 \caption{  The top copy of $\Sigma$ has been reflected about $\theta_2$.
-The red and green oriented curves in each copy of $\Sigma$ therefore are the same pair of curves slid along $I \times \Sigma$.
-Passing through the gluing monodromy, however, will send green and red curve to something else in general.}
+The \DIFdelbeginFL \DIFdelFL{red }\DIFdelendFL \DIFaddbeginFL \DIFaddFL{orange }\DIFaddendFL and \DIFdelbeginFL \DIFdelFL{green }\DIFdelendFL \DIFaddbeginFL \DIFaddFL{purple }\DIFaddendFL oriented curves in each copy of $\Sigma$ therefore are the same pair of curves slid along $I \times \Sigma$.
+Passing through the gluing monodromy, however, will send \DIFdelbeginFL \DIFdelFL{green }\DIFdelendFL \DIFaddbeginFL \DIFaddFL{orange }\DIFaddendFL and \DIFdelbeginFL \DIFdelFL{red }\DIFdelendFL \DIFaddbeginFL \DIFaddFL{purple }\DIFaddendFL curve to something else in general.}
 \label{embeddingsigmas}
 \end{figure}
 
@@ -626,21 +618,20 @@ On each $\Sigma_i$ either a copy of $H_1$ or of $H_2$ lies in the spine with bou
 On $\Sigma_2$, the cut system is reflected to match the embedding.
 One curve from each $\alpha$, $\beta$, and $\gamma$ cut system is drawn as a meridian of one of the tubes connecting two $\Sigma_i$, and symmetric curves bounding disks in $I \times (\Sigma - D^2)$ are drawn crossing the tubes.
 The construction differs from the discussion of Section \ref{sec_cutsystems} only in the region $I_{23} \times (\Sigma - D^2)$.
-The curves drawn here will not \DIFaddbegin \DIFadd{in general }\DIFaddend be symmetric.
+The curves drawn here will not in general be symmetric.
 Given an arc $c \in \Sigma_3$ with boundary lying on $\Sigma_3 \cap \del B_{13}$, the disk $I_{23} \times c$ lies in $X_1 \cap X_3$, so its boundary is a $\gamma$ curve.
-\DIFdelbegin \DIFdel{However, the monodromy is applied in this region, and neither $\Sigma_1$ nor $\Sigma_3$ was reflected to draw our diagram.
-}\DIFdelend The boundary of the disk $I_{23} \times c$ consists of $c \subset \Sigma_3$, \DIFdelbegin \DIFdel{$\varphi(c) \subset \Sigma_1$}\DIFdelend \DIFaddbegin \DIFadd{$\eta_{3 \to 1}(c) \subset \Sigma_1$}\DIFaddend , and two arcs in the tube between $\Sigma_1$ and $\Sigma_3$ connecting the corresponding ends of $c$ and \DIFdelbegin \DIFdel{$\varphi(c)$}\DIFdelend \DIFaddbegin \DIFadd{$\eta_{3 \to 1}(c)$}\DIFaddend .
+The boundary of the disk $I_{23} \times c$ consists of $c \subset \Sigma_3$, $\eta_{3 \to 1}(c) \subset \Sigma_1$, and two arcs in the tube between $\Sigma_1$ and $\Sigma_3$ connecting the corresponding ends of $c$ and $\eta_{3 \to 1}(c)$.
 
 
 We can now describe the algorithm to draw the trisection diagram.
 Let $\theta_1$, $\theta_2$, and $\theta_3$ be three angles equidistributed in $S^1$ as before.
 Let $\theta_{ij}$ denote the angle halfway between $\theta_i$ and $\theta_j$, lying in the smaller ($<\pi$) angular region between them.
-$\alpha$ curves denote a cut system for $X_1 \cap X_2$, $\beta$ for $X_1 \cap X_3$, and $\gamma$ for $X_2 \cap X_3$.
+\DIFaddbegin \DIFadd{We describe }\DIFaddend $\alpha$ curves \DIFdelbegin \DIFdel{denote }\DIFdelend \DIFaddbegin \DIFadd{determining }\DIFaddend a cut system for $X_1 \cap X_2$, $\beta$ \DIFaddbegin \DIFadd{curves a cut system }\DIFaddend for $X_1 \cap X_3$, and $\gamma$ \DIFaddbegin \DIFadd{curves a cut system }\DIFaddend for $X_2 \cap X_3$.
 
 \begin{enumerate}
 \item Draw the genus $3g+1$ surface as three twice punctured copies $\Sigma$ with tubes connecting each pair.
 Denote the copies of $\Sigma$ by $\Sigma_1$, $\Sigma_2$, and $\Sigma_3$, lying at $\theta_1$, $\theta_2$, and $\theta_3$ respectively.
-\item Draw $2g$ \DIFdelbegin \DIFdel{disjoint nonisotopic }\DIFdelend \DIFaddbegin \DIFadd{nonseparating disjoint }\DIFaddend $\alpha$ curves symmetric about $\theta_{12}$ and $2g$ \DIFdelbegin \DIFdel{disjoint nonisotopic }\DIFdelend \DIFaddbegin \DIFadd{nonseparating disjoint }\DIFaddend $\beta$ curves symmetric about $\theta_{23}$.
+\item Draw $2g$ nonseparating disjoint $\alpha$ curves symmetric about $\theta_{12}$ and $2g$ nonseparating disjoint $\beta$ curves symmetric about $\theta_{23}$.
 The $\alpha$ curves necessarily avoid $\Sigma_3$ and similarly the $\beta$ curves necessarily avoid $\Sigma_1$.
 These are the curves bounding product disks in $I_{12} \times (\Sigma - D^2)$ and $I_{13} \times (\Sigma - D^2)$ respectively.
 \item Draw a cut system for $H_1$ on $\Sigma_1$ as $\beta$ curves and on $\Sigma_3$ as $\alpha$ curves.
@@ -650,12 +641,11 @@ These are the curves bounding product disks in $I_{12} \times (\Sigma - D^2)$ an
 The cut system should be reflected about $\theta_2$ to match the embedding of $\Sigma_2$.
 \item Draw a $\gamma$ curve as a meridian of the tube connecting $\Sigma_2$ with either $\Sigma_1$ or $\Sigma_3$.
 The two choices are slide equivalent.
-\item Let $c_1,\cdots,c_{2g}$ be a \DIFdelbegin \DIFdel{set of disjoint nonparallel }\DIFdelend \DIFaddbegin \DIFadd{nonseparating collection of disjoint }\DIFaddend arcs in $\Sigma_3$ with their boundaries lying on the puncture \DIFdelbegin \DIFdel{of $\Sigma_3$ }\DIFdelend \DIFaddbegin \DIFadd{$\{3/4\} \times \del B_{23} \subset \Sigma_3$ }\DIFaddend that is tubed to \DIFdelbegin \DIFdel{$\Sigma_1$.
-Then $\varphi(c_1),\cdots,\varphi(c_{2g})$ is a set of disjoint nonparallel }\DIFdelend \DIFaddbegin \DIFadd{the puncture $\{1/4\} \times \del B_{23} \subset \Sigma_1$.
+\item Let $c_1,\cdots,c_{2g}$ be a nonseparating collection of disjoint arcs in $\Sigma_3$ with their boundaries lying on the puncture $\{3/4\} \times \del B_{23} \subset \Sigma_3$ that is tubed to the puncture $\{1/4\} \times \del B_{23} \subset \Sigma_1$.
 Recall that these two punctures are identified by $\eta_{3 \to 1}$.
-Then $\eta_{3 \to 1}(c_1),\cdots,\eta_{3 \to 1}(c_{2g})$ is a nonseparating collection of disjoint }\DIFaddend arcs in $\Sigma_1$ with their boundaries lying on the puncture of $\Sigma_1$ that is tubed to $\Sigma_3$.
-Draw $2g$ \DIFdelbegin \DIFdel{nonisotopic }\DIFdelend \DIFaddbegin \DIFadd{nonseparating disjoint }\DIFaddend $\gamma$ curves by connecting up each $c_i$ with \DIFdelbegin \DIFdel{$\varphi(c_i)$ }\DIFdelend \DIFaddbegin \DIFadd{$\eta_{3 \to 1}(c_i)$ }\DIFaddend using two arcs in the tube between $\Sigma_1$ and $\Sigma_3$.
-If $a,b$ are the two endpoints of $c_i$, we connect $c_i$ and \DIFdelbegin \DIFdel{$\varphi(c_i)$ }\DIFdelend \DIFaddbegin \DIFadd{$\eta_{3 \to 1}(c_i)$ }\DIFaddend such that $a$ is connected to \DIFdelbegin \DIFdel{$\varphi(a)$ }\DIFdelend \DIFaddbegin \DIFadd{$\eta_{3 \to 1}(a)$ }\DIFaddend and $b$ to \DIFdelbegin \DIFdel{$\varphi(b)$}\DIFdelend \DIFaddbegin \DIFadd{$\eta_{3 \to 1}(b)$}\DIFaddend .
+Then $\eta_{3 \to 1}(c_1),\cdots,\eta_{3 \to 1}(c_{2g})$ is a nonseparating collection of disjoint arcs in $\Sigma_1$ with their boundaries lying on the puncture of $\Sigma_1$ that is tubed to $\Sigma_3$.
+Draw $2g$ nonseparating disjoint $\gamma$ curves by connecting up each $c_i$ with $\eta_{3 \to 1}(c_i)$ using two arcs in the tube between $\Sigma_1$ and $\Sigma_3$.
+If $a,b$ are the two endpoints of $c_i$, we connect $c_i$ and $\eta_{3 \to 1}(c_i)$ such that $a$ is connected to $\eta_{3 \to 1}(a)$ and $b$ to $\eta_{3 \to 1}(b)$.
 In other words, we connect each arc to its image with the opposite orientation.
 These are the curves bounding product disks in $I_{23} \times (\Sigma - D^2)$.
 \end{enumerate}
@@ -675,7 +665,7 @@ An example of the collection of $\gamma$ curves is shown in Figure \ref{greenex}
 \centering
 \includegraphics[height=3in]{s1rp3_green.png}
 \caption{The set of $\gamma$ curves when $M =\R P^3$ and $\varphi$ flips $H_1$ and $H_2$.
-Restricting the bottom two $\gamma$ curves to $\Sigma_3$ gives a \DIFdelbeginFL \DIFdelFL{complicated }\DIFdelendFL pair of \DIFaddbeginFL \DIFaddFL{trivial looking }\DIFaddendFL arcs that turn into \DIFdelbeginFL \DIFdelFL{trivial looking }\DIFdelendFL \DIFaddbeginFL \DIFaddFL{complicated }\DIFaddendFL arcs when \DIFdelbeginFL \DIFdelFL{$\varphi$ }\DIFdelendFL \DIFaddbeginFL \DIFaddFL{$\eta_{3 \to 1}$ }\DIFaddendFL is applied to the surface.
+Restricting the bottom two $\gamma$ curves to $\Sigma_3$ gives a pair of trivial looking arcs that turn into complicated arcs when $\eta_{3 \to 1}$ is applied to the surface.
 Connecting the former arcs with the latter, keeping orientations of the arcs in mind, produces the full $\gamma$ curves.}
 \label{greenex}
 \end{figure}
@@ -683,55 +673,65 @@ Connecting the former arcs with the latter, keeping orientations of the arcs in 
 \smallskip
 \noindent\textit{Case 2: $\varphi$ preserves the Heegaard splitting}\ \
 
-We begin by constructing the genus $4g+1$ unbalanced trisection shown in Figure \ref{unbalancedbreakdown} by attaching tubes through the areas indicated by horizontal lines as in the previous constructions.
-After constructing a diagram for this trisection we will find a set of $g$ destabilizations resulting in a genus $3g+1$ diagram.
-We conclude by showing that the destabilized trisection is the same as the trisection constructed in Section \ref{sec_mainthm}.
+We begin by constructing \DIFdelbegin \DIFdel{the genus }\DIFdelend \DIFaddbegin \DIFadd{an unbalanced }\DIFaddend $4g+1$ unbalanced trisection \DIFdelbegin \DIFdel{shown in Figure \ref{unbalancedbreakdown} }\DIFdelend \DIFaddbegin \DIFadd{from Figure \ref{preservebreakdown} }\DIFaddend by attaching tubes through the areas indicated by horizontal lines as in the previous constructions.  After constructing a diagram for this \DIFdelbegin \DIFdel{trisection }\DIFdelend \DIFaddbegin \DIFadd{unbalanced trisection, }\DIFaddend we will find a set of $g$ destabilizations resulting in a genus $3g+1$ diagram.  We \DIFaddbegin \DIFadd{will }\DIFaddend conclude by showing that the destabilized \DIFdelbegin \DIFdel{trisection is }\DIFdelend \DIFaddbegin \DIFadd{diagram corresponds to }\DIFaddend the same as the trisection \DIFaddbegin \DIFadd{as was }\DIFaddend constructed in Section \ref{sec_mainthm}.
 
-\begin{figure}[h]
-\centering
-\includegraphics[height=1.8in]{MxS1_unbalanced.png}
-\caption{$I \times M$ is depicted as a rectangle with $I$ as the horizontal axis and $M$ as the vertical axis.
-The middle horizontal line represents $I \times \Sigma$, so the copy of $M$ represented by each vertical slice is cut by the middle line into copies of the handlebodies $H_1$ and $H_2$.}
-\label{unbalancedbreakdown}
-\end{figure}
+\DIFdelbegin %DIFDELCMD < \begin{figure}[h]
+%DIFDELCMD < \centering
+%DIFDELCMD < \includegraphics[height=1.8in]{MxS1_unbalanced.png}
+%DIFDELCMD < %%%
+%DIFDELCMD < \caption{%
+{%DIFAUXCMD
+\DIFdelFL{$I \times M$ is depicted as a rectangle with $I$ as the horizontal axis and $M$ as the vertical axis.
+The middle horizontal line represents $I \times \Sigma$, so the copy of $M$ represented by each vertical slice is cut by the middle line into copies of the handlebodies $H_1$ and $H_2$.}}
+%DIFAUXCMD
+%DIFDELCMD < \label{unbalancedbreakdown}
+%DIFDELCMD < \end{figure}
+%DIFDELCMD < %%%
+\DIFdelend \DIFaddbegin \DIFadd{The construction will mainly differ in the handling of $R_4$, as we will not initially split $R_4$ into two regions as we did when constructing a balanced trisection.  As in Section \ref{sec_mainthm}, define $I_{13}, I_{23a}, I_{23b}$, and $I_{24}$ such that $I_{ij}$ corresponds to an interval where $R_i$ and $R_j$ meet in a horizontal segment.  Define small disjoint balls $B_{13}, B_{23a}, B_{23b}$, and $B_{24}$ in $M$, each meeting $\Sigma$ in a single disk.  Than we obtain a genus $4g+1$ unbalanced trisection by defining
+}\DIFaddend 
 
-To begin, draw the triple intersection surface for this diagram as four \DIFaddbegin \DIFadd{twice punctured }\DIFaddend copies of $\Sigma$ connected by tubes.
+\DIFaddbegin \begin{align*}
+&\DIFadd{X_1 = (R_1 \cup R_4 \cup N_{23a} \cup N_{23b}) - (\mathring N_{13} \cup \mathring N_{24}) }\\
+&\DIFadd{X_2 = (R_2 \cup N_{13}) - (\mathring N_{23a} \cup \mathring N_{23b} \cup \mathring N_{24}) }\\
+&\DIFadd{X_3 = (R_3 \cup N_{24}) - (\mathring N_{13} \cup \mathring N_{23a} \cup \mathring N_{23b})
+}\end{align*}
+
+\DIFadd{Here, $X_1$ has genus $2g + 1$, while $X_2$ and $X_3$ have genus $g+1$.
+}
+
+\DIFadd{We can now begin constructing a diagram for this trisection.  }\DIFaddend To begin, draw the triple intersection surface for this diagram as four twice punctured copies of $\Sigma$ connected by tubes.
 Call the four copies $\Sigma_1, \Sigma_2, \Sigma_3$, and $\Sigma_4$ where $\Sigma_i$ of cyclically adjacent indices are connected by tubes.
-\DIFdelbegin \DIFdel{Draw them }\DIFdelend \DIFaddbegin \DIFadd{In our construction $\Sigma_1, \Sigma_2, \Sigma_3$, and $\Sigma_4$ correspond to the copies of $\Sigma$ lying in $M_{1/5}, M_{2/5}, M_{3/5}$, and $M_{4/5}$ respectively, and can be pictured as lying at the triple intersection corners in Figure \ref{preservebreakdown}.
+In our construction $\Sigma_1, \Sigma_2, \Sigma_3$, and $\Sigma_4$ correspond to the copies of $\Sigma$ lying in $M_{1/5}, M_{2/5}, M_{3/5}$, and $M_{4/5}$ respectively, and can be pictured as lying at the triple intersection corners in Figure \ref{preservebreakdown}.
 Similar to the case where $\varphi$ flips the Heegaard splitting, $[1/5, 4/5] \times \Sigma \subset [1/5, 4/5] \times M$ induces identifications $\eta_{i \to j}\colon \Sigma_i \to \Sigma_j$ for all $1 \le i < j \le 4$.
 $I_{13} \times M$ induces a different identification $\eta_{4 \to 1}\colon \Sigma_4 \to \Sigma_1$.
 By the same argument as in the case of $\varphi$ flipping the Heegaard splitting, we see that $\eta_{4 \to 1} = (\eta_{1 \to 4}^{-1} \circ \varphi)$.
-}
 
-\DIFadd{Draw the $\Sigma_i$ }\DIFaddend in the plane at evenly distributed $\theta$ values $\theta_1$, $\theta_2$, $\theta_3$, and $\theta_4$, with all holes of $\Sigma_i$ lying along the $\theta_i$ axis.
+Draw the $\Sigma_i$ in the plane at evenly distributed $\theta$ values $\theta_1$, $\theta_2$, $\theta_3$, and $\theta_4$, with all holes of $\Sigma_i$ lying along the $\theta_i$ axis.
 Reflect each of $\Sigma_2$ and $\Sigma_4$ locally in $\theta$ as we did with $\Sigma_2$ in the case where $\varphi$ flips the Heegaard splitting.
-\DIFaddbegin \DIFadd{Thus, $\eta_{1 \to 3}$ is the result rotating $\Sigma_1$ around the center of the diagram from $\theta_1$ to $\theta_3$.
+Thus, $\eta_{1 \to 3}$ is the result rotating $\Sigma_1$ around the center of the diagram from $\theta_1$ to $\theta_3$.
 $\eta_{1 \to 2}$ (resp. $\eta_{1 \to 4}$) is the result of rotating $\Sigma_1$ from $\theta_1$ to $\theta_2$ (resp. $\theta_4$) and then reflecting.
-}\DIFaddend This ensures that the curves bounding product disks in the copies of $I_{ij} \times (\Sigma - D^2)$ are symmetric except for \DIFaddbegin \DIFadd{the curves bounding disks in }\DIFaddend $I_{13} \times (\Sigma - D^2)$\DIFdelbegin \DIFdel{where the monodromy map occurs.
-}\DIFdelend \DIFaddbegin \DIFadd{.
+This ensures that the curves bounding product disks in the copies of $I_{ij} \times (\Sigma - D^2)$ are symmetric except for the curves bounding disks in $I_{13} \times (\Sigma - D^2)$.
 In the case of $I_{13} \times (\Sigma - D^2)$, given an essential arc $c$ in $\Sigma - D^2$, the disk $I_{13} \times c$ has boundary consisting of $c \subset \Sigma_4 - D^2$, $\eta_{4 \to 1}(c) \subset \Sigma_1 - D^2$, and two arcs in the tube between $\Sigma_1$ and $\Sigma_4$ connecting $c$ with $\eta_{4 \to 1}(c)$.
 The two arcs connect $c$ with its image with the opposite orientation, so an endpoint of $c$ is connected up to the image under $\eta_{4 \to 1}$ of the same endpoint in $\eta_{4 \to 1}(c)$.
-}
 
-\DIFaddend Again let $\theta_{ij}$ be the angle halfway between $\theta_i$ and $\theta_j$, lying in the smaller ($< \pi$) angular region between them.
+Again let $\theta_{ij}$ be the angle halfway between $\theta_i$ and $\theta_j$, lying in the smaller ($< \pi$) angular region between them.
 The algorithm to draw the diagram on this surface is then:
 
 \begin{enumerate}
 \item Draw the genus $4g+1$ surface as copies of $\Sigma_i$, $i = 1,2,3,4$ with surfaces at adjacent indices connected by tubes.
-\item Draw $2g$ \DIFdelbegin \DIFdel{disjoint nonisotopic }\DIFdelend \DIFaddbegin \DIFadd{nonseparating disjoint }\DIFaddend $\gamma$ curves symmetric about $\theta_{12}$ and avoiding $\Sigma_3$ and $\Sigma_4$, and another $2g$ $\gamma$ curves symmetric about $\theta_{34}$ and avoiding $\Sigma_1$ and $\Sigma_2$.
+\item Draw $2g$ nonseparating disjoint $\gamma$ curves symmetric about $\theta_{12}$ and avoiding $\Sigma_3$ and $\Sigma_4$, and another $2g$ $\gamma$ curves symmetric about $\theta_{34}$ and avoiding $\Sigma_1$ and $\Sigma_2$.
 \item Draw a single $\gamma$ curve as a meridian of the tube connecting $\Sigma_1$ and $\Sigma_4$.
-\item Draw $2g$ \DIFdelbegin \DIFdel{disjoint nonisotopic }\DIFdelend \DIFaddbegin \DIFadd{nonseparating disjoint }\DIFaddend $\alpha$ curves symmetric about $\theta_{23}$ and avoiding $\Sigma_1$ and $\Sigma_4$.
+\item Draw $2g$ nonseparating disjoint $\alpha$ curves symmetric about $\theta_{23}$ and avoiding $\Sigma_1$ and $\Sigma_4$.
 \item Draw a single $\beta$ and $\gamma$ curve each around either the tube connecting $\Sigma_1$ and $\Sigma_2$ or the tube connecting $\Sigma_3$ and $\Sigma_4$.
 The two choices are slide equivalent.
 \item Draw a cut system for $H_2$ consisting of $\alpha$ curves on $\Sigma_1$.
 \item Draw a reflected cut system for $H_2$ consisting of $\alpha$ curves on $\Sigma_4$.
 \item Draw a cut system for $H_1$ on each of $\Sigma_2$ and $\Sigma_3$ consisting of $\beta$ curves.
-\item Let $c_1,\cdots,c_{2g}$ be a \DIFdelbegin \DIFdel{set of disjoint nonparallel arcs in $\Sigma_1$ }\DIFdelend \DIFaddbegin \DIFadd{nonseparating collection of disjoint arcs in $\Sigma_4$ }\DIFaddend with their boundaries lying on the puncture of \DIFdelbegin \DIFdel{$\Sigma_1$ }\DIFdelend \DIFaddbegin \DIFadd{$\Sigma_4$ }\DIFaddend that is tubed to \DIFdelbegin \DIFdel{$\Sigma_4$}\DIFdelend \DIFaddbegin \DIFadd{$\Sigma_1$}\DIFaddend .
-Then connect each $c_i$ to its image \DIFdelbegin \DIFdel{$\varphi(c_i)$ in $\Sigma_4$ }\DIFdelend \DIFaddbegin \DIFadd{$\eta_{4 \to 1}(c_i)$ in $\Sigma_1$ }\DIFaddend with the opposite orientation.
+\item Let $c_1,\cdots,c_{2g}$ be a nonseparating collection of disjoint arcs in $\Sigma_4$ with their boundaries lying on the puncture of $\Sigma_4$ that is tubed to $\Sigma_1$.
+Then connect each $c_i$ to its image $\eta_{4 \to 1}(c_i)$ in $\Sigma_1$ with the opposite orientation.
 Draw these $2g$ curves as $\beta$ curves.
-Note that the \DIFdelbegin \DIFdel{$\varphi(c_i)$ }\DIFdelend \DIFaddbegin \DIFadd{$\eta_{4 \to 1}(c_i)$ }\DIFaddend will need to be drawn reflected in $\theta$ because \DIFaddbegin \DIFadd{$\eta_{1 \to 4}$ reflected the embedding of }\DIFaddend $\Sigma_4$ \DIFdelbegin \DIFdel{was reflected .
-If $\varphi$ }\DIFdelend \DIFaddbegin \DIFadd{relative to $\Sigma_1$.
-If $\eta_{4 \to 1}$ }\DIFaddend acts trivially on $\Sigma$ these curves will look symmetric about $\theta_{41}$.
+Note that the $\eta_{4 \to 1}(c_i)$ will need to be drawn reflected in $\theta$ because $\eta_{1 \to 4}$ reflected the embedding of $\Sigma_4$ relative to $\Sigma_1$.
+If $\eta_{4 \to 1}$ acts trivially on $\Sigma$ these curves will look symmetric about $\theta_{41}$.
 \end{enumerate}
 
 An example is shown in Figure \ref{unbalancedex}.
@@ -747,12 +747,12 @@ An example is shown in Figure \ref{unbalancedex}.
 \end{figure}
 
 We now show that this diagram can always be destabilized $g$ times.
-First, choose the symmetric $\alpha$ and $\gamma$ curves from steps (2) and (4) to consist of curves that either look like meridians in the chosen embedding or that lie on the near side of the surface in the diagram (in the sense that we can draw it on the diagram using a solid line) and loop around one of those meridians.
- This is already true in Figure \ref{unbalancedex}.
+First, choose the symmetric $\alpha$ and $\gamma$ curves from steps (2) and (4) to consist of curves that either look like meridians in the chosen embedding or that lie on the near side of the surface in the diagram (in the sense that we can draw it on the diagram using a solid line) and loop around one of those meridians\DIFdelbegin \DIFdel{.
+ This is already true }\DIFdelend \DIFaddbegin \DIFadd{, as }\DIFaddend in Figure \ref{unbalancedex}.
 Next, slide the $\beta$ meridian curves lying on $\Sigma_3$ to be parallel to the $g$ $\alpha$ curves that look like meridians symmetric across $\theta_{23}$.
 In Figure \ref{unbalancedex}, this slide is guided by the path $c$.
 At this point we have $g$ pairs of parallel $\alpha$ and $\beta$ curves, and the isotopy class of this curve intersects two of the $\gamma$ curves in one point each.
-See Figure \ref{destabpartial} for a partial \DIFdelbegin \DIFdel{Heegaard }\DIFdelend \DIFaddbegin \DIFadd{trisection }\DIFaddend diagram in the case where $g=2$.
+See Figure \ref{destabpartial} for a partial trisection diagram in the case where $g=2$.
 The $\alpha$ and $\beta$ curves depending on the monodromy or Heegaard diagram have not been drawn, so the partial diagram of Figure \ref{destabpartial} is actually general for the case where $g=2$.
 
 For each pair, we can slide one of these $\gamma$ curves over the other, after which we have a parallel $\alpha$ and $\beta$ curve that each intersect the set of $\gamma$ curves in a single point.
@@ -782,31 +782,36 @@ We analyze how these destabilizations affect the trisection itself to show that 
 
 Each destabilization is given by a parallel $\alpha$ and $\beta$ curve, both dual to a single $\gamma$ curve.
 Reindex to denote the sets of three curves by $\alpha_i,\beta_i$ and $\gamma_i$ for $1 \le i \le g$.
-Let $D_{\alpha_i}$ be a meridian disk of $X_1 \cap X_2$ with boundary $\alpha_i$, and $D_{\beta_i}$ a meridian disk of $X_1 \cap X_3$ with boundary $\beta_i$.
-$D_{\alpha_i} \cup D_{\beta_i}$ is a 2--sphere lying in $\del X_1$, and therefore bounds a 3--ball $B_i$ in $X_1$ by \cite{LaudenbachPoenaru1}.
-Hence, each $D_{\alpha_i} \cup D_{\beta_i}$ is the belt sphere of a 1--handle in a handle decomposition of $X_1$.
-The destabilizations are therefore obtained by ``compressing'' $X_1$ along $B_i$\DIFdelbegin \DIFdel{-- if }\DIFdelend \DIFaddbegin \DIFadd{.
-If }\DIFaddend $N(B_i)$ is a regular neighborhood of $B_i$ in $X_1$, we replace $X_1$ with $X_1 - N(B_i)$ and replace $X_2$ with $X_2 \cup N(B_i)$ (choosing $X_3$ instead of $X_2$ here is topologically equivalent).
-Each compression \DIFdelbegin \DIFdel{decreasing }\DIFdelend \DIFaddbegin \DIFadd{decreases }\DIFaddend the genus of $X_1$ by 1.
+\DIFdelbegin \DIFdel{Let }\DIFdelend \DIFaddbegin \DIFadd{Suppose }\DIFaddend $D_{\alpha_i}$ be a meridian disk of $X_1 \cap X_2$ with boundary $\alpha_i$, and $D_{\beta_i}$ a meridian disk of $X_1 \cap X_3$ with boundary $\beta_i$.
+\DIFaddbegin \DIFadd{Then }\DIFaddend $D_{\alpha_i} \cup D_{\beta_i}$ is a \DIFaddbegin \DIFadd{(nonseparating) }\DIFaddend 2--sphere lying in $\del X_1$, and therefore bounds a \DIFaddbegin \DIFadd{(nonseparating) }\DIFaddend 3--ball $B_i$ in $X_1$ by \cite{LaudenbachPoenaru1}.
+Hence \DIFdelbegin \DIFdel{, }\DIFdelend each $D_{\alpha_i} \cup D_{\beta_i}$ is the belt sphere of a 1--handle in a handle decomposition of $X_1$.
+The destabilizations are therefore obtained by ``compressing'' $X_1$ along $B_i$.
+If $N(B_i)$ is a regular neighborhood of $B_i$ in $X_1$, we replace $X_1$ with $X_1 - N(B_i)$ and replace $X_2$ with $X_2 \cup N(B_i)$ (choosing $X_3$ instead of $X_2$ here is topologically equivalent).
+Each compression decreases the genus of $X_1$ by 1.  \DIFaddbegin \DIFadd{We will find destabilizations by defining such pairs of disks $D_{\alpha_i}$ and $D_{\beta_i}$.
+}\DIFaddend 
 
-Let $x \in \mathring I_{12}$ and look at a single slice $M_x = \{x\} \times M$.
-Then $M_x \cap X_1 = H_1 - B_{12}$, $M_x \cap X_2 = H_2 - B_{12}$, and $M_x \cap X_3 = B_{12}$.
-\DIFdelbegin \DIFdel{$M_x \cap \alpha_i$ is an arc in $(H_1 - B_{12}) \cap H_2$ while $M_x \cap \beta_i$ is an arc in $B_{12} \cap (H_1 - B_{12})$.
-The }\DIFdelend \DIFaddbegin \DIFadd{$M_x \cap \alpha_i = M_x \cap \beta_i$ is a pair of two points.
-We can connect these two points with an arc of $D_{\alpha_i}$ in $(H_1 - B_{12}) \cap H_2 = M_x \cap X_1 \cap X_2$ and an arc of $D_{\beta_i}$ in $B_{12} \cap (H_1 - B_{12}) = M_x \cap X_1 \cap X_3$.
-In this way, we can obtain disks $D_{\alpha_i}$ and $D_{\beta_i}$ bounded by $\alpha_i = \beta_i$ by taking the }\DIFaddend union of these \DIFdelbegin \DIFdel{two arcs }\DIFdelend \DIFaddbegin \DIFadd{arcs for all $x \in I_{12}$.
+\DIFdelbegin \DIFdel{Let $x \in \mathring I_{12}$ }\DIFdelend \DIFaddbegin \DIFadd{Consider a fixed value of $i$ such that $1 \le i \le g$, so $\alpha_i$ }\DIFaddend and \DIFaddbegin \DIFadd{$\beta_i$ are parallel and are both dual to $\gamma_i$.  Let $x \in \mathring I_{24}$ and }\DIFaddend look at a single slice $M_x = \{x\} \times M$.
+Then \DIFdelbegin \DIFdel{$M_x \cap X_1 = H_1 - B_{12}$, $M_x \cap X_2 = H_2 - B_{12}$, and $M_x \cap X_3 = B_{12}$}\DIFdelend \DIFaddbegin \DIFadd{$M_x \cap X_1 = H_1 - B_{24}$, $M_x \cap X_2 = H_2 - B_{24}$, and $M_x \cap X_3 = B_{24}$}\DIFaddend .
+$M_x \cap \alpha_i = M_x \cap \beta_i$ is a pair of two points.
+We can connect these two points with an arc \DIFdelbegin \DIFdel{of $D_{\alpha_i}$ in $(H_1 - B_{12}) \cap H_2 = M_x \cap X_1 \cap X_2$ }\DIFdelend \DIFaddbegin \DIFadd{$c_{\alpha_i}$ in $(H_1 - B_{24}) \cap H_2 = M_x \cap X_1 \cap X_2$ }\DIFaddend and an arc \DIFdelbegin \DIFdel{of $D_{\beta_i}$ in $B_{12} \cap (H_1 - B_{12}) = M_x \cap X_1 \cap X_3$.
+In this way, we can obtain disks $D_{\alpha_i}$ and $D_{\beta_i}$ bounded by $\alpha_i = \beta_i$ by taking the union of these arcs for all $x \in I_{12}$.
 The disks $D_{\alpha_i}$ and $D_{\beta_i}$ are each capped off on the two sides by an arc of the intersection of $\alpha_i = \beta_i$ with $\Sigma_2 \subset M_{2/5}$ and an arc of the intersection with $\Sigma_3 \subset M_{3/5}$.
+}%DIFDELCMD < 
+
+%DIFDELCMD < %%%
+\DIFdel{We now need to find the ball $B_i \subset X_1$ bounded by $D_{\alpha_i} \cup D_{\alpha_i}$.
+Looking back at a single $M_x$, the union of the arc from $D_{\alpha_i}$ and the arc from $D_{\beta_i}$ }\DIFdelend \DIFaddbegin \DIFadd{$c_{\beta_i}$ in $B_{24} \cap (H_1 - B_{24}) = M_x \cap X_1 \cap X_3$.
+The union $c_{\alpha_i} \cup c_{\beta_i}$ }\DIFaddend is a simple closed curve in \DIFdelbegin \DIFdel{$\del (H_1 - B_{12})$}\DIFdelend \DIFaddbegin \DIFadd{$\del (H_1 - B_{24})$}\DIFaddend , and this curve bounds a disk $D_i$ in \DIFdelbegin \DIFdel{$H_1 - B_{12}$}\DIFdelend \DIFaddbegin \DIFadd{$H_1 - B_{24}$}\DIFaddend .    See Figure \ref{getU} \DIFaddbegin \DIFadd{for reference.
+Indeed, $D_{\alpha_i} =  X_1 \cap X_2$ can be obtained by taking the union $\bigcup_{x \in I_{24}} c_{\alpha_i}$}\DIFaddend .
+\DIFdelbegin \DIFdel{It follows that the ball $B_i$ is in fact $I_{12} \times D_i$, so }\DIFdelend \DIFaddbegin \DIFadd{$D_{\beta_i}$ is slightly more complicated, consisting of the union of $\bigcup_{x \in I_{24}} c_{\beta_i}$ together with copies of $D_i$ in each of $M_{2/5}$ and $M_{3/5}$.
 }
 
-\DIFadd{We now need to find the ball $B_i \subset X_1$ bounded by $D_{\alpha_i} \cup D_{\alpha_i}$.
-Looking back at a single $M_x$, the union of the arc from $D_{\alpha_i}$ and the arc from $D_{\beta_i}$ }\DIFaddend is a simple closed curve in $\del (H_1 - B_{12})$, and this curve bounds a disk $D_i$ in $H_1 - B_{12}$.
-See Figure \ref{getU}.
-It follows that the ball $B_i$ is in fact $I_{12} \times D_i$, so the destabilization is achieved by setting
+\DIFadd{The product $B_i = I_{24} \times D_i$ is the desired ball giving a destabilization.  Hence, }\DIFaddend the destabilization is achieved by setting
 
 \begin{align*}
-&X_1' = X_1 - N(I_{12} \times D_i) \\
+&X_1' = X_1 - N(I\DIFdelbegin \DIFdel{_{12} }\DIFdelend \DIFaddbegin \DIFadd{_{24} }\DIFaddend \times D_i) \\
 &X_2' = X_2\\
-&X_3' = X_3 \cup N(I_{12} \times D_i)
+&X_3' = X_3 \cup N(I\DIFdelbegin \DIFdel{_{12} }\DIFdelend \DIFaddbegin \DIFadd{_{24} }\DIFaddend \times D_i)
 \end{align*}
 
 \begin{figure}[h]
@@ -818,19 +823,39 @@ Note that the complement of the disks $D_i$ in $H_1$ is also a topological ball.
 \label{getU}
 \end{figure}
 
-Note that moving $\bigcup_{i=1}^g N(I_{12} \times D_i)$ to the $X_2'$ region rather than the $X_3'$ region would give the same topological result.
+Note that moving \DIFdelbegin \DIFdel{$\bigcup_{i=1}^g N(I_{12} \times D_i)$ }\DIFdelend \DIFaddbegin \DIFadd{$\bigcup_{i=1}^g N(I_{24} \times D_i)$ }\DIFaddend to the $X_2'$ region rather than the $X_3'$ region would give the same topological result.
 
-There are $g$ such destabilizations, so to get the final result we must find disjoint $D_1 \cdots D_g$ such that $B_i = I_{12} \times D_i$, and setting
-\begin{align*}
-&X_1' = X_1 - \bigcup_{i=1}^g N(I_{12} \times D_i) \\
+There are $g$ such destabilizations, so to get the final result we must find disjoint $D_1 \cdots D_g$ such that \DIFdelbegin \DIFdel{$B_i = I_{12} \times D_i$, and setting
+}\DIFdelend \DIFaddbegin \DIFadd{$B_i = I_{24} \times D_i$, and set
+}\DIFaddend \begin{align*}
+&X_1' = X_1 - \bigcup_{i=1}^g N(I\DIFdelbegin \DIFdel{_{12} }\DIFdelend \DIFaddbegin \DIFadd{_{24} }\DIFaddend \times D_i) \\
 &X_2' = X_2\\
-&X_3' = X_3 \cup \bigcup_{i=1}^g N(I_{12} \times D_i)
+&X_3' = X_3 \cup \bigcup_{i=1}^g N(I\DIFdelbegin \DIFdel{_{12} }\DIFdelend \DIFaddbegin \DIFadd{_{24} }\DIFaddend \times D_i)
 \end{align*}
 
-In the result of destabilization, $X_3' \cap M_x = B_{12} \cup \bigcup_{i=1}^g N(I_{12} \times D_i)$.
-This is a topological ball as can be seen in Figure \ref{getU} (the union of $B_{12}$ and regular neighborhoods of the disks in the figure).
-$X_1' \cap M_x$ consists of the complement of the disks $D_i$ in $H_1$, so it is also a topological ball.
-Thus, setting $U=X_1' \cap M_x$ and $V = X_3' \cap M_x$ shows that we have obtained the same genus $3g+1$ trisection as constructed in Section \ref{sec_mainthm}.
+In the result of destabilization, \DIFdelbegin \DIFdel{$X_3' \cap M_x = B_{12} \cup \bigcup_{i=1}^g N(I_{12} \times D_i)$}\DIFdelend \DIFaddbegin \DIFadd{$X_3' \cap M_x = B_{24} \cup \bigcup_{i=1}^g N(I_{24} \times D_i)$}\DIFaddend .
+This is a topological ball as can be seen in Figure \ref{getU} (the union of \DIFdelbegin \DIFdel{$B_{12}$ }\DIFdelend \DIFaddbegin \DIFadd{$B_{24}$ }\DIFaddend and regular neighborhoods of the disks in the figure).
+$X_1' \cap M_x$ consists of the complement of the disks $D_i$ in $H_1$, so it is also a topological ball.  
+\DIFdelbegin \DIFdel{Thus, setting }\DIFdelend \DIFaddbegin \DIFadd{We can then set  }\DIFaddend $U=X_1' \cap M_x$ and $V = X_3' \cap M_x$\DIFdelbegin \DIFdel{shows that }\DIFdelend \DIFaddbegin \DIFadd{.  The boundary $U \cap V$ consists of four disks, two of which are shown in Figure \ref{fig_uvboundary}.  Figure \ref{fig_splittinguv} shows that by performing an isotopy, this is in fact the same split $U \cap V$ as in Figure \ref{fig_disjointballs}.
+Thus, }\DIFaddend we have obtained the same genus $3g+1$ trisection as constructed in Section \ref{sec_mainthm}.
+\DIFaddbegin 
+
+\begin{figure}[h]
+\centering
+\includegraphics[height=1.6in]{UVboundary.png}
+\caption{\DIFaddFL{Two of four disks of the intersection $U \cap V$ are shown in purple.
+}}
+\label{fig_uvboundary}
+\end{figure}
+
+\begin{figure}[h]
+\centering
+\includegraphics[height=1.6in]{splittingUV.png}
+\caption{\DIFaddFL{Each of the four teal regions is a topological ball meeting the dark region $U$ in a disk.  Thus, $U$ can be isotoped to the union of the dark and teal regions.
+}}
+\label{fig_splittinguv}
+\end{figure}
+\DIFaddend 
 
 %%%%%%%%%
 
@@ -867,9 +892,7 @@ Does rotating the indices of the $X_i$ always produce an equivalent trisection?
 \label{unequal3}
 \end{question}
 
-Baykur and Saeki found genus $3g+1$ trisections in the case of Heegaard splitting preserving monodromy using simplified broken Lefschetz fibrations \DIFaddbegin \DIFadd{\mbox{%DIFAUXCMD
-\cite{BaykurSaeki1}}\hspace{0pt}%DIFAUXCMD
-}\DIFaddend .
+Baykur and Saeki found genus $3g+1$ trisections in the case of Heegaard splitting preserving monodromy using simplified broken Lefschetz fibrations \cite{BaykurSaeki1}.
 Their methods give a trisection map $X \to D^2$ with symmetric singular set, providing a partial answer to question \ref{q_assym}.
 However, it is difficult to obtain diagrams from their construction or to analyze precisely how the trisections cut up the manifold.
 
