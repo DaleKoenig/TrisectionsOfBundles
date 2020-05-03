@@ -590,19 +590,19 @@ Connecting the former arcs with the latter, keeping orientations of the arcs in 
 \smallskip
 \noindent\textit{Case 2: $\varphi$ preserves the Heegaard splitting}\ \
 
-We begin by constructing the genus $4g+1$ unbalanced trisection shown in Figure \ref{unbalancedbreakdown} by attaching tubes through the areas indicated by horizontal lines as in the previous constructions.
-After constructing a diagram for this trisection we will find a set of $g$ destabilizations resulting in a genus $3g+1$ diagram.
-We conclude by showing that the destabilized trisection is the same as the trisection constructed in Section \ref{sec_mainthm}.
+We begin by constructing an unbalanced $4g+1$ unbalanced trisection from Figure \ref{preservebreakdown} by attaching tubes through the areas indicated by horizontal lines as in the previous constructions.  After constructing a diagram for this unbalanced trisection, we will find a set of $g$ destabilizations resulting in a genus $3g+1$ diagram.  We will conclude by showing that the destabilized diagram corresponds to the same as the trisection as was constructed in Section \ref{sec_mainthm}.
 
-\begin{figure}[h]
-\centering
-\includegraphics[height=1.8in]{MxS1_unbalanced.png}
-\caption{$I \times M$ is depicted as a rectangle with $I$ as the horizontal axis and $M$ as the vertical axis.
-The middle horizontal line represents $I \times \Sigma$, so the copy of $M$ represented by each vertical slice is cut by the middle line into copies of the handlebodies $H_1$ and $H_2$.}
-\label{unbalancedbreakdown}
-\end{figure}
+The construction will mainly differ in the handling of $R_4$, as we will not initially split $R_4$ into two regions as we did when constructing a balanced trisection.  As in Section \ref{sec_mainthm}, define $I_{13}, I_{23a}, I_{23b}$, and $I_{24}$ such that $I_{ij}$ corresponds to an interval where $R_i$ and $R_j$ meet in a horizontal segment.  Define small disjoint balls $B_{13}, B_{23a}, B_{23b}$, and $B_{24}$ in $M$, each meeting $\Sigma$ in a single disk.  Than we obtain a genus $4g+1$ unbalanced trisection by defining
 
-To begin, draw the triple intersection surface for this diagram as four twice punctured copies of $\Sigma$ connected by tubes.
+\begin{align*}
+&X_1 = (R_1 \cup R_4 \cup N_{23a} \cup N_{23b}) - (\mathring N_{13} \cup \mathring N_{24}) \\
+&X_2 = (R_2 \cup N_{13}) - (\mathring N_{23a} \cup \mathring N_{23b} \cup \mathring N_{24}) \\
+&X_3 = (R_3 \cup N_{24}) - (\mathring N_{13} \cup \mathring N_{23a} \cup \mathring N_{23b})
+\end{align*}
+
+Here, $X_1$ has genus $2g + 1$, while $X_2$ and $X_3$ have genus $g+1$.
+
+We can now begin constructing a diagram for this trisection.  To begin, draw the triple intersection surface for this diagram as four twice punctured copies of $\Sigma$ connected by tubes.
 Call the four copies $\Sigma_1, \Sigma_2, \Sigma_3$, and $\Sigma_4$ where $\Sigma_i$ of cyclically adjacent indices are connected by tubes.
 In our construction $\Sigma_1, \Sigma_2, \Sigma_3$, and $\Sigma_4$ correspond to the copies of $\Sigma$ lying in $M_{1/5}, M_{2/5}, M_{3/5}$, and $M_{4/5}$ respectively, and can be pictured as lying at the triple intersection corners in Figure \ref{preservebreakdown}.
 Similar to the case where $\varphi$ flips the Heegaard splitting, $[1/5, 4/5] \times \Sigma \subset [1/5, 4/5] \times M$ induces identifications $\eta_{i \to j}\colon \Sigma_i \to \Sigma_j$ for all $1 \le i < j \le 4$.
