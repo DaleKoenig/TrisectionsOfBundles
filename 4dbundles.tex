@@ -691,22 +691,22 @@ The destabilizations are therefore obtained by ``compressing'' $X_1$ along $B_i$
 If $N(B_i)$ is a regular neighborhood of $B_i$ in $X_1$, we replace $X_1$ with $X_1 - N(B_i)$ and replace $X_2$ with $X_2 \cup N(B_i)$ (choosing $X_3$ instead of $X_2$ here is topologically equivalent).
 Each compression decreases the genus of $X_1$ by 1.  We will find destabilizations by defining such pairs of disks $D_{\alpha_i}$ and $D_{\beta_i}$.
 
-Let $x \in \mathring I_{12}$ and look at a single slice $M_x = \{x\} \times M$.
-Then $M_x \cap X_1 = H_1 - B_{12}$, $M_x \cap X_2 = H_2 - B_{12}$, and $M_x \cap X_3 = B_{12}$.
+Let $x \in \mathring I_{24}$ and look at a single slice $M_x = \{x\} \times M$.
+Then $M_x \cap X_1 = H_1 - B_{24}$, $M_x \cap X_2 = H_2 - B_{24}$, and $M_x \cap X_3 = B_{24}$.
 $M_x \cap \alpha_i = M_x \cap \beta_i$ is a pair of two points.
-We can connect these two points with an arc of $D_{\alpha_i}$ in $(H_1 - B_{12}) \cap H_2 = M_x \cap X_1 \cap X_2$ and an arc of $D_{\beta_i}$ in $B_{12} \cap (H_1 - B_{12}) = M_x \cap X_1 \cap X_3$.
-In this way, we can obtain disks $D_{\alpha_i}$ and $D_{\beta_i}$ bounded by $\alpha_i = \beta_i$ by taking the union of these arcs for all $x \in I_{12}$.
+We can connect these two points with an arc of $D_{\alpha_i}$ in $(H_1 - B_{24}) \cap H_2 = M_x \cap X_1 \cap X_2$ and an arc of $D_{\beta_i}$ in $B_{12} \cap (H_1 - B_{24}) = M_x \cap X_1 \cap X_3$.
+In this way, we can obtain disks $D_{\alpha_i}$ and $D_{\beta_i}$ bounded by $\alpha_i = \beta_i$ by taking the union of these arcs for all $x \in I_{24}$.
 The disks $D_{\alpha_i}$ and $D_{\beta_i}$ are each capped off on the two sides by an arc of the intersection of $\alpha_i = \beta_i$ with $\Sigma_2 \subset M_{2/5}$ and an arc of the intersection with $\Sigma_3 \subset M_{3/5}$.
 
 We now need to find the ball $B_i \subset X_1$ bounded by $D_{\alpha_i} \cup D_{\alpha_i}$.
-Looking back at a single $M_x$, the union of the arc from $D_{\alpha_i}$ and the arc from $D_{\beta_i}$ is a simple closed curve in $\del (H_1 - B_{12})$, and this curve bounds a disk $D_i$ in $H_1 - B_{12}$.
+Looking back at a single $M_x$, the union of the arc from $D_{\alpha_i}$ and the arc from $D_{\beta_i}$ is a simple closed curve in $\del (H_1 - B_{24})$, and this curve bounds a disk $D_i$ in $H_1 - B_{24}$.
 See Figure \ref{getU}.
-It follows that the ball $B_i$ is in fact $I_{12} \times D_i$, so the destabilization is achieved by setting
+It follows that the ball $B_i$ is in fact $I_{24} \times D_i$, so the destabilization is achieved by setting
 
 \begin{align*}
-&X_1' = X_1 - N(I_{12} \times D_i) \\
+&X_1' = X_1 - N(I_{24} \times D_i) \\
 &X_2' = X_2\\
-&X_3' = X_3 \cup N(I_{12} \times D_i)
+&X_3' = X_3 \cup N(I_{24} \times D_i)
 \end{align*}
 
 \begin{figure}[h]
@@ -718,17 +718,17 @@ Note that the complement of the disks $D_i$ in $H_1$ is also a topological ball.
 \label{getU}
 \end{figure}
 
-Note that moving $\bigcup_{i=1}^g N(I_{12} \times D_i)$ to the $X_2'$ region rather than the $X_3'$ region would give the same topological result.
+Note that moving $\bigcup_{i=1}^g N(I_{24} \times D_i)$ to the $X_2'$ region rather than the $X_3'$ region would give the same topological result.
 
-There are $g$ such destabilizations, so to get the final result we must find disjoint $D_1 \cdots D_g$ such that $B_i = I_{12} \times D_i$, and setting
+There are $g$ such destabilizations, so to get the final result we must find disjoint $D_1 \cdots D_g$ such that $B_i = I_{24} \times D_i$, and setting
 \begin{align*}
-&X_1' = X_1 - \bigcup_{i=1}^g N(I_{12} \times D_i) \\
+&X_1' = X_1 - \bigcup_{i=1}^g N(I_{24} \times D_i) \\
 &X_2' = X_2\\
-&X_3' = X_3 \cup \bigcup_{i=1}^g N(I_{12} \times D_i)
+&X_3' = X_3 \cup \bigcup_{i=1}^g N(I_{24} \times D_i)
 \end{align*}
 
-In the result of destabilization, $X_3' \cap M_x = B_{12} \cup \bigcup_{i=1}^g N(I_{12} \times D_i)$.
-This is a topological ball as can be seen in Figure \ref{getU} (the union of $B_{12}$ and regular neighborhoods of the disks in the figure).
+In the result of destabilization, $X_3' \cap M_x = B_{24} \cup \bigcup_{i=1}^g N(I_{24} \times D_i)$.
+This is a topological ball as can be seen in Figure \ref{getU} (the union of $B_{24}$ and regular neighborhoods of the disks in the figure).
 $X_1' \cap M_x$ consists of the complement of the disks $D_i$ in $H_1$, so it is also a topological ball.  
 We can then set  $U=X_1' \cap M_x$ and $V = X_3' \cap M_x$.  The boundary $U \cap V$ consists of four disks, two of which are shown in Figure \ref{fig_uvboundary}.  Figure \ref{fig_splittinguv} shows that by performing an isotopy, we can in fact achieve the same split $U \cap V$ as in Figure \ref{fig_disjointballs}.
 Thus, we have obtained the same genus $3g+1$ trisection as constructed in Section \ref{sec_mainthm}.
